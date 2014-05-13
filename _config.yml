@@ -1,9 +1,12 @@
 name: Drew Gottlieb
-description: I make things with code and wires.
+description: Software Developer
 meta_description: "My projects, experiments, successes, and failures."
 baseurl: ''
 
 markdown: redcarpet
+redcarpet:
+  extensions:
+    - lax_spacing
 highlighter: pygments
 logo: 'http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600'
 paginate: 4
