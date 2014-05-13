@@ -1,14 +1,35 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-  </header>
+<header class="site-head back-bar" {% if page.cover %} style="background-image: url({{ page.cover }})"{% endif %}>
+    <div class="vertical">
+        <div class="site-head-content-viewing" class="inner">
+            <h3 class=""> <a href="/">&larr; Back</a> </h3>
+        </div>
+    </div>
+</header>
 
-  <article class="post-content">
-  {{ content }}
-  </article>
+<main class="content" role="main">
+    <article class="post">
+      {% comment %}
+        <header class="post-header">
+            <a id="blog-logo" href="{{site.baseurl}}">
+                {% if site.logo %}
+                    <img src="{{site.logo}}" alt="{{ site.name }}" />
+                {% else %}
+                    <span class="blog-title">{{ site.name }}</span>
+                {%endif%} 
+            </a>
+        </header>
+      {% endcomment %}
 
-</div>
+        <h1 class="post-title">{{ page.title }}</h1>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+    </article>
+
+</main>
