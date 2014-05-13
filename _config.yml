@@ -1,21 +1,19 @@
 name: Drew Gottlieb
-description: I make things with code and wires
+description: I make things with code and wires.
 meta_description: "My projects, experiments, successes, and failures."
+baseurl: ''
 
 markdown: redcarpet
 highlighter: pygments
-logo: false
-profileimage: 'http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600'
-paginate: 10
+logo: 'http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600'
+paginate: 4
+
+author:         
+  name: 'Drew Gottlieb'
+  website: 'http://blog.minipenguin.com'
+  bio: I'm a software developer studying at the Rochester Institute of Technology.
+    I'm passionate about combining software, hardware, and media to build things people love.
+  image: 'http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600'
 
 # Details for the RSS feed generator
-url: 'www.blog.minipenguin.com'
-author: 'Drew Gottlieb'
-author_description: I'm a software developer studying at the Rochester Institute of Technology.
-  I'm passionate about combining software, hardware, and other media to build things people love.
-
-navlinks:
-  - title: About
-    url: /about.html
-  - title: Projects
-    url: https://github.com/dag10
+url:            'http://blog.minipenguin.com'

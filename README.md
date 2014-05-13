@@ -1,38 +1,29 @@
-# Kasper
+# Vapor for Jekyll
 
-This is a port of Ghost's default theme [Casper](https://github.com/tryghost/casper) for Jekyll. 
-Feel free to fork, change, modify and re-use it.
+This is a port of the [Vapor theme](https://github.com/sethlilly/Vapor) for [Ghost](http://ghost.org/) to [Jekyll](http://jekyllrb.com/)
 
-## How to use it
+*Vapor* is Copyright (c) 2013 [Seth Lilly](https://github.com/sethlilly) - Released under The MIT License.
 
-Simply clone this repository, and then run `jekyll -w serve` inside the directory.
+In [Seth Lilly](https://github.com/sethlilly)'s words:
 
-Kasper theme includes:
+> Minimal and responsive with a focus on typography, *Vapor* is a theme that embodies the core concept of [Ghost](http://ghost.org/)&mdash;it fades into the background, bringing the focus to your content.
 
-* Pagination
-* Rss
-* Google Analytics Tracking code
-* Code Syntax Highlight
-* Author's profile with picture
-* Disqus comments
+See *Vapor* on *Ghost* in action at [Hipster Ghost](http://hipsterghost.com/). See the *Jekyll* port of *Vapor* you're looking at live [here](http://lucafoschini.github.io/jekyll-vapor/).
 
-## Screenshots
+## Features
 
-![index page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-index.png)
-![post page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-post.png)
+The port includes:
+
+* *Ghost*'s *Vapor* 1.2.1 functionalities
+* About Page
+* Google Analytics
+
+## How to
+
+Run `jekyll -w serve --baseurl ''` in the root directory.
+
+## Thanks
+
+This porting drew inspiration from [Rosario Lascuna](https://github.com/rosario)'s [kasper](https://github.com/rosario/kasper) port of [Casper](https://github.com/tryghost/casper), the default *Ghost* theme.
 
 
-## Thanks 
-Most of the work as been already done by the Ghost team, I've just ported Casper to Jekyll. 
-I've also added few things for specifid to Jekyll and some minor style changes.
-
-## Copyright & License
-
-Copyright (C) 2013 Ghost Foundation - Released under the MIT License.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
