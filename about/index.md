@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-Hi, I'm Drew Gottlieb, and I have a passion for using software and hardware to build things people love.
+I have a passion for creating software and hardware to build things people love.
 
 My projects have used C, C++, Python, Javascript, C#, Java, and PHP. 
 
