@@ -478,3 +478,23 @@ a.archive-link {
   margin-top: 50px;
   color: #000000;
 }
+
+.image-left,
+.image-right {
+  margin: 10px;
+}
+
+.image-left {
+  float: left;
+}
+
+.image-right {
+  float: right;
+}
+
+img.image-left,
+.image-left img,
+img.image-right,
+.image-right img {
+  border-radius: 3px;
+}
