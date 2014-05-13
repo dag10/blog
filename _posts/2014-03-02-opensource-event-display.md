@@ -18,7 +18,7 @@ excerpt: 'Web and desktop projects are fun, but hardware adds a whole new dimens
 Web and desktop projects are fun, but hardware adds a whole new dimension to
 software projects. I wanted to work on something *physical*, and I found the
 perfect application: A device that shows upcoming events on my floor’s lounge.
-
+<!-- more -->
 I live in the *[Computer Science House](http://csh.rit.edu)* at RIT and we
 have several special rooms, such as the lounge. We also maintain a shared
 Google Calendar, which is what my device pulls events from.
