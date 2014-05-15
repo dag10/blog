@@ -481,7 +481,15 @@ a.archive-link {
 
 .image-left,
 .image-right {
-  margin: 10px;
+  margin: 10px 20px;
+}
+
+.image-left {
+  margin-left: 0;
+}
+
+.image-right {
+  margin-right: 0;
 }
 
 .image-left {
