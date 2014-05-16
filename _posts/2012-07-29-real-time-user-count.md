@@ -16,7 +16,7 @@ connections. Why not use the same principle for other uses, too? Although
 M-JPEG streaming doesn’t work in Internet Explorer, it can still be useful.
 
 The underlying protocol is simply a multipart HTTP request using the
-[x-mixed-replace](http://en.wikipedia.org/wiki/MIME#Mixed-Replace_.28experimental.29)
+[x-mixed-replace](http://en.wikipedia.org/wiki/MIME#Mixed-Replace)
 content type. Basically, the server sends the document (or in this case, image)
 multiple times, with each part replacing the previous part. So when an IP
 camera is streaming, it’s just sending multiple jpeg images that each replace
