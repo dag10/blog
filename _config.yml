@@ -3,6 +3,8 @@ description: Software Developer
 meta_description: "My projects, experiments, successes, and failures."
 baseurl: ''
 
+include: ['.htaccess']
+
 markdown: redcarpet
 redcarpet:
   extensions:

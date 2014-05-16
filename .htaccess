@@ -1,0 +1,26 @@
+RewriteEngine on
+
+# Map the old wordpress posts (that I've ported) to the same post on the new
+# Jekyll blog.
+
+RewriteCond %{QUERY_STRING} ^p=791$
+RewriteRule ^$ /2014/03/02/opensource-event-display.html? [L,R=301]
+
+RewriteCond %{QUERY_STRING} ^p=748$
+RewriteRule ^$ /2014/02/27/recreating-tv-graphics-program.html? [L,R=301]
+
+RewriteCond %{QUERY_STRING} ^p=736$
+RewriteRule ^$ /2013/02/04/winning-trip-to-googleplex.html? [L,R=301]
+
+RewriteCond %{QUERY_STRING} ^p=647$
+RewriteRule ^$ /2012/07/29/real-time-user-count.html? [L,R=301]
+
+# Map all other old wordpress posts to the same post on old.minipenguin.com.
+
+RewriteCond %{QUERY_STRING} ^p=[0-9]+$
+RewriteRule ^$ http://old.minipenguin.com/ [L,R=302]
+
+# Map /wp-content/* files to the old domain.
+
+Redirect 302 /wp-content/ http://old.minipenguin.com/wp-content/
+
