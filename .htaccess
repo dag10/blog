@@ -1,5 +1,9 @@
 RewriteEngine on
 
+# Turn off indexing.
+
+Options -Indexes
+
 # Specify the error documents.
 
 ErrorDocument 404 /404.html
