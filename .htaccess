@@ -15,6 +15,9 @@ RewriteRule ^$ /2013/02/04/winning-trip-to-googleplex.html? [L,R=301]
 RewriteCond %{QUERY_STRING} ^p=647$
 RewriteRule ^$ /2012/07/29/real-time-user-count.html? [L,R=301]
 
+RewriteCond %{QUERY_STRING} ^p=582$
+RewriteRule ^$ /2011/12/29/trying-out-box2d.html? [L,R=301]
+
 # Map all other old wordpress posts to the same post on old.minipenguin.com.
 
 RewriteCond %{QUERY_STRING} ^p=[0-9]+$
