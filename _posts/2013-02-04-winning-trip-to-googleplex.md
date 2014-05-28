@@ -3,11 +3,11 @@ layout: post
 title: Winning a Trip to The Googleplex
 date: 2013-02-04
 tags: [google, google code-in]
-photo-folder: /post_images/2013/02/04/winning-trip-to-googleplex
+content-folder: /post-content/2013/02/04/winning-trip-to-googleplex
 ---
 
 <div class="image-left">
-  <img src="{{page.photo-folder}}/gci.png" />
+  <img src="{{page.content-folder}}/gci.png" />
 </div>
 
 I just won a free trip to the Google Headquarters. How did I do it?
@@ -33,7 +33,7 @@ received a Galaxy Nexus smart phone!
 
 <div class="image-right">
   <a href="http://hedgewars.org" target="_blank">
-    <img src="{{page.photo-folder}}/hedgewars.png" />
+    <img src="{{page.content-folder}}/hedgewars.png" />
   </a>
 </div>
 

@@ -3,11 +3,11 @@ layout: post
 title: Recreating my TV graphics program from the ground up with Qt
 date: 2014-02-27
 tags: [c++, graphics, newtek, qt]
-photo-folder: /post_images/2014/02/27/recreating-tv-graphics-program
+content-folder: /post-content/2014/02/27/recreating-tv-graphics-program
 ---
 
 <div class="image-left">
-  <img src="{{page.photo-folder}}/launch.png" />
+  <img src="{{page.content-folder}}/launch.png" />
   <em>The launch screen of the new program.</em>
 </div>
 
@@ -15,8 +15,8 @@ As a sophomore two years ago, I created a
 [program to generate the live scoreboard graphics](https://github.com/dag10/tetv-graphics/tree/old)
 for my high school’s television sports broadcasts. At the time, I knew C# and
 Windows Forms most comfortably, so I used those technologies to build the
-software. There is a [main control window]({{page.photo-folder}}/main-control-window.png),
-and then a second full-screen [window]({{page.photo-folder}}/output-window.png)
+software. There is a [main control window]({{page.content-folder}}/main-control-window.png),
+and then a second full-screen [window]({{page.content-folder}}/output-window.png)
 which outputs to a second monitor showing the graphics over a black
 background. We take the output to the “second monitor” and apply
 [luma key](http://en.wikipedia.org/wiki/Luma_key) to remove the black
@@ -43,7 +43,7 @@ Next, I’ll be creating a set of control widgets (text boxes, check boxes,
 spin boxes, etc.) that when a value is updated by the user, the same value is
 updated on the master and all other slaves.
 
-[![Layout]({{page.photo-folder}}/layout.png "Three-column layout.")]({{page.photo-folder}}/layout.png)
+[![Layout]({{page.content-folder}}/layout.png "Three-column layout.")]({{page.content-folder}}/layout.png)
 *Three-column layout, and a panel showing connected slaves.*
 
 As another new feature, graphics will be sent wirelessly. Since our TV studio

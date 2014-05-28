@@ -3,7 +3,7 @@ layout: post
 title: An open-source device for displaying upcoming events
 date: 2014-03-02
 tags: [arduino, c++, computer science house, flask, python]
-photo-folder: /post_images/2014/03/02/opensource-event-display
+content-folder: /post-content/2014/03/02/opensource-event-display
 excerpt: 'Web and desktop projects are fun, but hardware adds a whole new dimension to
   software projects. I wanted to work on something physical, and I found the
   perfect application: A device that shows upcoming events on my floor’s lounge.
@@ -12,7 +12,7 @@ excerpt: 'Web and desktop projects are fun, but hardware adds a whole new dimens
   Google Calendar, which is what my device pulls events from.'
 ---
 
-![Event LCD installed outside lounge.]({{page.photo-folder}}/installed.jpg)
+![Event LCD installed outside lounge.]({{page.content-folder}}/installed.jpg)
 *My upcoming-event display installed outside my dorm’s lounge.*
 
 Web and desktop projects are fun, but hardware adds a whole new dimension to
@@ -28,7 +28,7 @@ The Hardware
 
 <div class="image-right">
   <a href="http://oshpark.com/shared_projects/OAnGy2k5">
-    <img src="{{page.photo-folder}}/pcb.png" />
+    <img src="{{page.content-folder}}/pcb.png" />
   </a>
   <em>Render of custom PCB.</em>
 </div>
@@ -50,7 +50,7 @@ Finally, I found an old, plastic “project enclosure” laying around. I have n
 idea where it came from, but it was the perfect size for my electronics. After
 some dremeling, it had holes for the LCD and the ethernet port.
 
-![Inside of device]({{page.photo-folder}}/inside.jpg)
+![Inside of device]({{page.content-folder}}/inside.jpg)
 *The assembled device without the back cover.*
 
 Finally, up on the wall it goes. I ran cat5e cable in the ceiling from the

@@ -3,11 +3,11 @@ layout: post
 title: Trying out Box2d
 date: 2011-12-29
 tags: [Box2D, c++, graphics, SFML]
-photo-folder: /post_images/2011/12/29/trying-out-box2d
+content-folder: /post-content/2011/12/29/trying-out-box2d
 ---
 
 <div class="image-right">
-  <img width="300" src="{{page.photo-folder}}/box2d-dominoes.png" />
+  <img width="300" src="{{page.content-folder}}/box2d-dominoes.png" />
   <em>Dominoes falling towards a house.</em>
 </div>
 
