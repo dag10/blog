@@ -3,7 +3,8 @@ layout: page
 title: About me
 ---
 
-I have a passion for creating software and hardware to build things people love.
+I have a passion for creating meaningful and delightful experiences through
+software and hardware.
 
 My projects have used C, C++, Python, Javascript, C#, Java, and PHP. 
 
