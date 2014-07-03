@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-I have a passion for creating meaningful and delightful experiences through
+I have a passion for creating meaningful and delightful experiences with
 software and hardware.
 
 My projects have used C, C++, Python, Javascript, C#, Java, and PHP. 
