@@ -33,9 +33,9 @@ RewriteRule ^$ /2011/09/18/storing-data-on-audio-cassette.html? [L,R=301]
 # Map all other old wordpress posts to the same post on old.minipenguin.com.
 
 RewriteCond %{QUERY_STRING} ^p=[0-9]+$
-RewriteRule ^$ http://old.minipenguin.com/ [L,R=302]
+RewriteRule ^$ http://old.drewgottlieb.net/ [L,R=302]
 
 # Map /wp-content/* files to the old domain.
 
-Redirect 302 /wp-content/ http://old.minipenguin.com/wp-content/
+Redirect 302 /wp-content/ http://old.drewgottlieb.net/wp-content/
 
