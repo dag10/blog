@@ -6,7 +6,7 @@ tags: [graphics, mjpeg, node.js, real-time]
 ---
 
 <div class="image-left">
-  <img src="http://minipenguin.com:9192/online.png" />
+  <img src="http://drewgottlieb.net:9192/online.png" />
   <em>Live Demonstration</em>
 </div>
 
