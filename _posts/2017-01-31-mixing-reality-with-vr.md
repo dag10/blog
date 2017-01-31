@@ -72,7 +72,7 @@ First, you can just forget about the VR headset! Just put it down, don the
 HoloLens, grab the controllers, and get to making art – floating in the middle
 of your actual living room, not from some mysterious black void.
 
-<img src="{{page.content-folder}}/ar_blocks.gif" />
+<video autoplay="" loop="" style="max-width: 100%; min-height: 338px;"><source type="video/mp4" src="{{page.content-folder}}/ar_blocks_min.mp4"></video>
 
 Second, people can collaborate in within the same space, across virtual and
 holographic environments. As a spectator with a HoloLens, you can say to the
@@ -81,7 +81,7 @@ yourself. Or if you’re ignoring the VR headset entirely and just interacting a
 two people wearing HoloLenses, each of you can take one controller and you can
 build very large shapes – with some communication.
 
-<img src="{{page.content-folder}}/ar_collaboration.gif" />
+<video autoplay="" loop="" style="max-width: 100%; min-height: 338px;"><source type="video/mp4" src="{{page.content-folder}}/ar_collaboration_min.mp4"></video>
 
 I have no doubt this kind of mixed space will be a big part of the future,
 especially for creative industries. As virtual and mixed reality become
