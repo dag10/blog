@@ -4,9 +4,10 @@ title: About me
 ---
 
 I have a passion for creating meaningful and delightful experiences with
-software and hardware.
+software and hardware. Focused on empowering content creation and creativity,
+and computing that feels human.
 
-My projects have used C, C++, Python, Javascript, C#, Java, and PHP. 
+My projects have used C, C++, C#, Python, Javascript, C#, Java, and PHP. 
 
 Places I can be found:
 - [GitHub](https://github.com/dag10)
