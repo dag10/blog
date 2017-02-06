@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    
+      <title>Drew Gottlieb - Real-time User Count Without Any Javascript</title>
+    
+
+    
+      <meta name="description" content="
+  
+  Live Demonstration
+
+" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+
+</head>
+<body class="home-template">
+
+    <header id="site-head">
+    
+       <a id="blog-logo" href="http://drewgottlieb.net">
+        <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" alt="Blog Logo" />
+       </a>
+    
+    <h1 class="blog-title"><a href="http://drewgottlieb.net">Drew Gottlieb</a></h1>
+    <h2 class="blog-description">Software Developer
+    | <a href='/about'> About me </a>
+    | <a href='https://github.com/dag10'> Projects </a>
+    | <a href='/resume.pdf'> Resume </a>
+    </h2>
+</header>
+
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header>
+        
+           <div class="post-meta tags">
+	     Posted in graphics, mjpeg, node.js, and real-time
+	   </div>
+	
+        <h1 class="post-title">Real-time User Count Without Any Javascript</h1>
+        <div class="post-meta">
+	   <time datetime="2012-07-29">29 Jul 2012</time>
+	</div>
+        </header>
+
+        <section class="post-content">
+            <div class="image-left">
+  <img src="http://drewgottlieb.net:9192/online.png" />
+  <em>Live Demonstration</em>
+</div>
+
+<p>IP cameras are frequently streamed as
+<a href="http://en.wikipedia.org/wiki/Motion_JPEG#M-JPEG_over_HTTP">M-JPEG</a> over HTTP
+connections. Why not use the same principle for other uses, too? Although
+M-JPEG streaming doesn’t work in Internet Explorer, it can still be useful.</p>
+
+<p>The underlying protocol is simply a multipart HTTP request using the
+<a href="http://en.wikipedia.org/wiki/MIME#Mixed-Replace">x-mixed-replace</a>
+content type. Basically, the server sends the document (or in this case, image)
+multiple times, with each part replacing the previous part. So when an IP
+camera is streaming, it’s just sending multiple jpeg images that each replace
+the previous image.</p>
+
+<p>It looks like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">HTTP/1.1 200 Ok
+Content-Type: multipart/x-mixed-replace; boundary=--icecream
+
+--icecream
+Content-Type: image/jpeg
+Content-Length: [length]
+
+[data]
+
+--icecream
+Content-Type: image/jpeg
+Content-Length: [length]
+
+[data]
+
+--icecream
+</code></pre></div>
+<p>(and so on)</p>
+
+<!-- more -->
+
+<p>In this bare-bones example, the boundary is <em>icecream</em>, but ideally you’d want
+to use something that won’t appear in the data itself. Also, the content-type
+can be anything, such as image/png.</p>
+
+<p>While learning about this, a practical application immediately came to mind: a
+real time online-users counter — such as the one above. This method is great
+for this use because it fills two roles. First, it keeps a persistent
+connection between the client and server, so we know when a user connects and
+when that user disconnects. Second, it can display the user count in real-time
+without requiring any page updates. This system can be used in places where
+Javascript is not an option, such as on a forum.</p>
+
+<p>I made it using <a href="http://nodejs.org">Node.js</a>, with
+<a href="http://backbonejs.org">Backbone.js</a>, and
+<a href="https://github.com/learnboost/node-canvas/">node-canvas</a> — which unfortunately
+does not work on Windows. If you’re familiar with Backbone, the code should be
+rather self-explanatory.</p>
+
+<p><a href="https://gist.github.com/dag10/48e6d25415ca92318815">Here is the source</a>.</p>
+
+<p>I can see some neat uses for this type of image, since content can be made
+interactive without the use of client-side scripts. Interactivity can be
+introduced by having links with the server returning <em>HTTP 204</em> No Content,
+such as <a href="http://httpstat.us/204">this link</a> (provided by
+<a href="http://httpstat.us">httpstat.us</a>). The client won’t go to a new page, but the
+server will be aware of the client’s request and can perform an action. With
+this, real-time tic-tac-toe or even hang-man is possible.</p>
+
+<p>Just some thoughts.</p>
+
+<p>You can follow discussion of this post on
+<a href="https://news.ycombinator.com/item?id=4307126">Hacker News</a>.</p>
+
+<hr>
+
+<p><strong>(03:28 EST) Update:</strong> Through experimentation, I just discovered that
+unfortunately, it is not possible to combine HTTP 204 links with image
+streams, as I suggested in my last paragraph. Upon clicking any link, the
+browser stops loading all resources, including streams. This is before it even
+knows that the result status will be 204. What a bummer.</p>
+
+        </section>
+
+        <section class="share">
+            <p class="info">Share this post</p>
+            <a class="icon-twitter"
+            href="http://twitter.com/share?text=Real-time User Count Without Any Javascript&url=http://drewgottlieb.net/2012/07/29/real-time-user-count.html"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <span class="hidden">Twitter</span>
+            </a>
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://drewgottlieb.net/2012/07/29/real-time-user-count.html"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <span class="hidden">Facebook</span>
+            </a>
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=http://drewgottlieb.net/2012/07/29/real-time-user-count.html"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <span class="hidden">Google+</span>
+            </a>
+        </section>
+
+        <footer class="post-footer">
+	    
+            <section class="author">
+                <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" class="userimage" alt="Drew Gottlieb" />
+                <p class="attr">Author</p>
+                <h4><a href="http://drewgottlieb.net">Drew Gottlieb</a></h4>
+                <p class="bio">I'm a software developer studying at the Rochester Institute of Technology. On a mission to empower creativity with computing that feels human.</p>
+            </section>
+	    
+
+
+            
+	      <section class="disqus">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+ 	    var disqus_shortname = 'minipenguin'; 
+      var disqus_identifier = '/2012/07/29/real-time-user-count';
+   	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            
+        </footer>
+		
+    </article>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="inner">
+             <section class="copyright">&copy; 2017 <a href="/">Drew Gottlieb</a>. All rights reserved.</section>
+             <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19567403-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

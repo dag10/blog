@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    
+      <title>Drew Gottlieb - Storing Digital Data on an Audio Cassette</title>
+    
+
+    
+      <meta name="description" content="
+  
+  The cassette recorder hooked up to my computer's front audio ports.
+
+" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+
+</head>
+<body class="home-template">
+
+    <header id="site-head">
+    
+       <a id="blog-logo" href="http://drewgottlieb.net">
+        <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" alt="Blog Logo" />
+       </a>
+    
+    <h1 class="blog-title"><a href="http://drewgottlieb.net">Drew Gottlieb</a></h1>
+    <h2 class="blog-description">Software Developer
+    | <a href='/about'> About me </a>
+    | <a href='https://github.com/dag10'> Projects </a>
+    | <a href='/resume.pdf'> Resume </a>
+    </h2>
+</header>
+
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header>
+        
+           <div class="post-meta tags">
+	     Posted in audio, cassette, data, data storage, fsk, and rtty
+	   </div>
+	
+        <h1 class="post-title">Storing Digital Data on an Audio Cassette</h1>
+        <div class="post-meta">
+	   <time datetime="2011-09-18">18 Sep 2011</time>
+	</div>
+        </header>
+
+        <section class="post-content">
+            <div class="image-left" style="width: 250px;">
+  <img src="/post-content/2011/09/18/storing-data-on-audio-cassette/overview.jpg" />
+  <em>The cassette recorder hooked up to my computer's front audio ports.</em>
+</div>
+
+<p>A few days ago my dad bought a simple audio cassette player/recorder to make a
+digital copy of an old tape recording he had of Pioneer 10 leaving the solar
+system. I had the opportunity to try something I always wanted to try: Storing
+data on an audio cassette. After some researching, I decided to use
+<a href="http://en.wikipedia.org/wiki/Radioteletype">RTTY</a> (Radioteletype). I found an
+awesome program called Digital Master 780, which is part of a freeware Ham
+Radio software package,
+<a href="https://web.archive.org/web/20120720063807/http://wiki.ham-radio-deluxe.com/index.php?title=Main_Page">Ham Radio Deluxe</a>.</p>
+
+<p>To connect the tape player, I needed to use two 3.5mm
+<a href="http://en.wikipedia.org/wiki/TRS_connector">TRS</a> cables, one for my computer
+to hear the cassette player’s output, and another one to send audio to the
+player’s audio input for recording.</p>
+
+<div class="image-right" style="width: 200px;">
+  <img src="/post-content/2011/09/18/storing-data-on-audio-cassette/splice.jpg" />
+  <em>My DIY 3.5mm TRS cable from two earphone cables.</em>
+</div>
+
+<p>Since I only own one cable, I made a second one by using two old earphone
+wires, wire strippers, two alligator clips, and tape. It looks messy, but it
+<a href="/post-content/2011/09/18/storing-data-on-audio-cassette/splice_closeup.jpg">gets the job done</a>!</p>
+
+<p>For reading and writing digital data to the tape, I tried out several audio
+formats that the program could use. Due to the low audio quality that the tape
+can store, I was only able to get away with using RTTY. After further
+experimentation, I decided that these are the best settings I can use:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    100 Baud, 170 Hz shift, 7 bits (ASCII), 2 stop bits.
+</code></pre></div>
+<p>Success! Here’s a video of me writing two paragraphs of “Lorem ispum” text to
+the tape:</p>
+
+<!-- more -->
+
+<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/BMVO4X5u-gE?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+
+<p>And here&#39;s a video of me reading the data back:</p>
+
+<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/EfcOOFiPw4w?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+
+<p>And here’s the <a href="/post-content/2011/09/18/storing-data-on-audio-cassette/sample.ogg">audio</a> if want to know what it
+sounds like, or even decode it yourself: </p>
+
+<iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/23632022&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true">
+</iframe>
+
+<p>Although slow, I just <em>had</em> to try storing a file on it. I took a low-quality
+70-70 pixel .gif image and used this
+<a href="http://www.motobit.com/util/base64-decoder-encoder.asp">online tool</a> to
+convert it into copyable Base64-encoded text. It took about ten minutes for it
+to write the data to the cassette, and it used up half of the tape! After a
+ten-minute reading of the tape, I was able to use the same website to convert
+the Base64-encoded file back into its original form. It worked!</p>
+
+<p>So what can I conclude about storing data on an audio cassette? It’s possible,
+but it’s extremely slow and space-consuming. If anything, it’s only good for
+storing text, as even the smallest files will consume half of your tape if
+you’re using Base64-encoding and RTTY-100.</p>
+
+<p>What I did is not new, by the way. Some of the first desktops and early
+microcomputers
+<a href="http://en.wikipedia.org/wiki/Compact_Cassette#Data_recording">used cassettes for data storage</a>.
+The difference, however, is that they did not use RTTY (which was designed for
+over-the-air text communications), and instead used
+<a href="http://en.wikipedia.org/wiki/Frequency-shift_keying">FSK</a>
+(Frequency-shift Keying). As noted on Wikipedia, they could transfer data as a
+rate up to 2000 bits/s, which results in a 660Kb capacity for a 90-minute tape.</p>
+
+<p>n 2011, storing data on audio cassettes is pointless and impractical. However,
+if you happen to have a tape and a tape recorder, it’s pretty fun to do it
+anyway.</p>
+
+        </section>
+
+        <section class="share">
+            <p class="info">Share this post</p>
+            <a class="icon-twitter"
+            href="http://twitter.com/share?text=Storing Digital Data on an Audio Cassette&url=http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <span class="hidden">Twitter</span>
+            </a>
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <span class="hidden">Facebook</span>
+            </a>
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <span class="hidden">Google+</span>
+            </a>
+        </section>
+
+        <footer class="post-footer">
+	    
+            <section class="author">
+                <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" class="userimage" alt="Drew Gottlieb" />
+                <p class="attr">Author</p>
+                <h4><a href="http://drewgottlieb.net">Drew Gottlieb</a></h4>
+                <p class="bio">I'm a software developer studying at the Rochester Institute of Technology. On a mission to empower creativity with computing that feels human.</p>
+            </section>
+	    
+
+
+            
+	      <section class="disqus">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+ 	    var disqus_shortname = 'minipenguin'; 
+      var disqus_identifier = '/2011/09/18/storing-data-on-audio-cassette';
+   	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            
+        </footer>
+		
+    </article>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="inner">
+             <section class="copyright">&copy; 2017 <a href="/">Drew Gottlieb</a>. All rights reserved.</section>
+             <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19567403-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

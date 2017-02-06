@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    
+      <title>Drew Gottlieb - Mixing Reality with Virtual Reality</title>
+    
+
+    
+      <meta name="description" content="Virtual reality is a pretty magical experience when it comes to making art.
+However, if you have friends in the room watching you, the magic is lost on
+them. They can only see the experience by looking at a distorted preview of the
+player’s perspective on a computer monitor.
+
+A friend was recently painting a 3D submarine in Tilt Brush. “Look at this
+periscope!” she said. I told her to look closer at it, and I leaned into my
+computer monitor to get a glimpse of what she made.
+
+We can do better than this. Why do I have to get up off the couch to see what
+my friend is creating? Why can’t I just lean back and see the art floating in
+the middle of the room?
+
+Until recently, such magic would have been impossible. That is, until Microsoft
+released development kits of their new mixed-reality HoloLens glasses. I’m
+fortunate to have access a couple units, and I really wanted to use mixed
+reality to share in a VR experience.
+
+So I spent a week making a proof of concept to feel that out. It runs on the
+HTC Vive, a VR system that includes two positionally-tracked controllers.
+Here’s what that looks like:
+" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+
+</head>
+<body class="home-template">
+
+    <header id="site-head">
+    
+       <a id="blog-logo" href="http://drewgottlieb.net">
+        <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" alt="Blog Logo" />
+       </a>
+    
+    <h1 class="blog-title"><a href="http://drewgottlieb.net">Drew Gottlieb</a></h1>
+    <h2 class="blog-description">Software Developer
+    | <a href='/about'> About me </a>
+    | <a href='https://github.com/dag10'> Projects </a>
+    | <a href='/resume.pdf'> Resume </a>
+    </h2>
+</header>
+
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header>
+        
+           <div class="post-meta tags">
+	     Posted in hololens, vive, mixed reality, and virtual reality
+	   </div>
+	
+        <h1 class="post-title">Mixing Reality with Virtual Reality</h1>
+        <div class="post-meta">
+	   <time datetime="2017-01-31">31 Jan 2017</time>
+	</div>
+        </header>
+
+        <section class="post-content">
+            <p>Virtual reality is a pretty magical experience when it comes to making art.
+However, if you have friends in the room watching you, the magic is lost on
+them. They can only see the experience by looking at a distorted preview of the
+player’s perspective on a computer monitor.</p>
+
+<p>A friend was recently painting a 3D submarine in Tilt Brush. “Look at this
+periscope!” she said. I told her to look closer at it, and I leaned into my
+computer monitor to get a glimpse of what she made.</p>
+
+<p>We can do better than this. Why do I have to get up off the couch to see what
+my friend is creating? Why can’t I just lean back and see the art floating in
+the middle of the room?</p>
+
+<p>Until recently, such magic would have been impossible. That is, until Microsoft
+released development kits of their new mixed-reality HoloLens glasses. I’m
+fortunate to have access a couple units, and I really wanted to use mixed
+reality to share in a VR experience.</p>
+
+<p>So I spent a week making a proof of concept to feel that out. It runs on the
+HTC Vive, a VR system that includes two positionally-tracked controllers.
+Here’s what that looks like:</p>
+
+<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/XPYb2IsZL68" frameborder="0" allowfullscreen>
+</iframe>
+
+<!-- more -->
+
+<p>I didn’t want to spend a lot of time recreating a 3D painting app like Tilt
+Brush, so I threw together an app in which the VR player uses their controller
+to draw cubes in the air. Simple stuff, since that’s not the interesting part.</p>
+
+<p>The interesting part is that when the same app runs on a HoloLens, it
+automatically connects to the VR session using Unity’s built-in networking and
+matchmaking service.</p>
+
+<p>A challenge in this experiment was not just getting the Vive and HoloLens to
+talk to each other, but to bring them to a shared understanding of space. How
+do we align the virtual and room spaces? Ideally this would happen
+automatically, but I couldn’t think of a way to do this just using the
+technology offered by the Vive and HoloLens. Perhaps you could attach tracking
+symbols to the VR base stations? I only had four days to work on this before
+flying away for several months, so I went with a different, quicker solution.
+When the HoloLens app connects to the VR app, the game enters “alignment mode”.
+The HoloLens speaks, prompting the wearer to pick up one of the Vive controllers
+and intersect it with a floating ‘ghost’ controller. Once the real and
+holographic controllers are aligned, the wearer pulls the trigger and the voice
+proudly announces, “You are now aligned.” There’s no limit on how many people
+can join in, and I successfully tested with two HoloLenses participating in the
+same session.</p>
+
+<p>This quick and dirty solution works better than expected! There are four degrees
+of alignment: three degrees of position, and one degree of rotation around the
+room’s vertical axis. The biggest error comes from slight inaccuracy in rotation
+when aligning the controller. If just one degree off, one won’t really notice
+much misalignment near where the alignment point was, but they’ll see increasing
+misalignment as they move farther away from that point. In the future I can
+reduce this degree of error by prompting the alignment of three points instead
+of just one, and using the position information from these to determine
+rotation, ignoring the controller’s actual rotation at each point.</p>
+
+<p>Let’s talk about the experience. There are two interesting takeaways from this
+kind of setup.</p>
+
+<p>First, you can just forget about the VR headset! Just put it down, don the
+HoloLens, grab the controllers, and get to making art – floating in the middle
+of your actual living room, not from some mysterious black void.</p>
+
+<video autoplay="" loop="" style="max-width: 100%; min-height: 338px;"><source type="video/mp4" src="/post-content/2017/01/31/mixing-reality-with-vr/ar_blocks_min.mp4"></video>
+
+<p>Second, people can collaborate in within the same space, across virtual and
+holographic environments. As a spectator with a HoloLens, you can say to the
+VR player “I have an idea, hand me a controller” and then interact with the art
+yourself. Or if you’re ignoring the VR headset entirely and just interacting as
+two people wearing HoloLenses, each of you can take one controller and you can
+build very large shapes – with some communication.</p>
+
+<video autoplay="" loop="" style="max-width: 100%; min-height: 338px;"><source type="video/mp4" src="/post-content/2017/01/31/mixing-reality-with-vr/ar_collaboration_min.mp4"></video>
+
+<p>I have no doubt this kind of mixed space will be a big part of the future,
+especially for creative industries. As virtual and mixed reality become
+stronger platforms for content creation, it’s only inevitable that they’ll be
+able to be interact on a whim.</p>
+
+<p>If you have a Vive and a HoloLens, feel free to try the project out for
+yourself! Get the source code from GitHub:
+<a href="https://github.com/dag10/HoloViveObserver">https://github.com/dag10/HoloViveObserver</a></p>
+
+<hr>
+
+<p><em>Disclaimer: One week ago I started an internship at Google working on
+<a href="https://tiltbrush.com">Tilt Brush</a>. This project was my own work from before
+the internship and has no association with Google.</em></p>
+
+        </section>
+
+        <section class="share">
+            <p class="info">Share this post</p>
+            <a class="icon-twitter"
+            href="http://twitter.com/share?text=Mixing Reality with Virtual Reality&url=http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <span class="hidden">Twitter</span>
+            </a>
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <span class="hidden">Facebook</span>
+            </a>
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <span class="hidden">Google+</span>
+            </a>
+        </section>
+
+        <footer class="post-footer">
+	    
+            <section class="author">
+                <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" class="userimage" alt="Drew Gottlieb" />
+                <p class="attr">Author</p>
+                <h4><a href="http://drewgottlieb.net">Drew Gottlieb</a></h4>
+                <p class="bio">I'm a software developer studying at the Rochester Institute of Technology. On a mission to empower creativity with computing that feels human.</p>
+            </section>
+	    
+
+
+            
+	      <section class="disqus">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+ 	    var disqus_shortname = 'minipenguin'; 
+      var disqus_identifier = '/2017/01/31/mixing-reality-with-vr';
+   	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            
+        </footer>
+		
+    </article>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="inner">
+             <section class="copyright">&copy; 2017 <a href="/">Drew Gottlieb</a>. All rights reserved.</section>
+             <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19567403-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

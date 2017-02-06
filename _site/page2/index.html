@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    
+      <title>Drew Gottlieb - Home</title>
+    
+
+    
+      <meta name="description" content="My projects, experiments, successes, and failures." />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+
+</head>
+<body class="home-template">
+
+    <header id="site-head">
+    
+       <a id="blog-logo" href="http://drewgottlieb.net">
+        <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" alt="Blog Logo" />
+       </a>
+    
+    <h1 class="blog-title"><a href="http://drewgottlieb.net">Drew Gottlieb</a></h1>
+    <h2 class="blog-description">Software Developer
+    | <a href='/about'> About me </a>
+    | <a href='https://github.com/dag10'> Projects </a>
+    | <a href='/resume.pdf'> Resume </a>
+    </h2>
+</header>
+
+
+<main class="content" role="main">
+
+  
+    <article class="preview post">
+       <header>
+         <h1 class="post-title"><a href="/2011/12/29/trying-out-box2d.html">Trying out Box2d</a></h1>
+         <div class="post-meta"><time datetime="29 December, 2011">29 December, 2011</time></div>
+       </header>
+       <section class="post-excerpt post-content">
+         <p><div class="image-right">
+  <img width="300" src="/post-content/2011/12/29/trying-out-box2d/box2d-dominoes.png" />
+  <em>Dominoes falling towards a house.</em>
+</div>
+
+<p>What is Box2D? It’s a
+<a href="http://box2d.org/about">free and open source 2D physics engine</a>. It is
+developed with C++, and has fortunately been ported to many other languages,
+including Actionscript and Java. I was eager to try it out.</p>
+
+<p>At the same time, I was eager to get more familiar with the new
+<a href="http://en.wikipedia.org/wiki/C++11">C++11</a> standard I’ve been hearing about
+(a.k.a. C++0x). So I made a small program to get a taste of Box2D and C++11
+features. You can view and download the program
+<a href="https://github.com/dag10/sfml-box2d-demo/releases/tag/v1.0">here</a>.</p>
+
+<p>To use it, drag out a rectangle with your mouse. When you release the mouse,
+the rectangle becomes a object in the world. It is affected by gravity, and
+interacts realistically with other objects. If you happen to own a touch
+screen, you can press space to hide the mouse cursor. You’re welcome.</p>
+
+<p>Mixing Box2D with SFML graphics was a quite tricky. To keep track of the
+objects, I created an std::vector of this struct:</p>
+
+<div class="code-leadin">
+  <a href="https://github.com/dag10/sfml-box2d-demo/blob/f3238b80/include/Environment.h#L19">
+    Environment.h:19
+  </a> (rev f3238b80)
+</div>
+<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">shared_ptr</span> <span class="n">graphic</span><span class="p">;</span>
+    <span class="n">shared_ptr</span> <span class="n">body</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">PhysicsObject</span><span class="p">;</span>
+</code></pre></div>
+<p>There was a problem though: The Box2D world’s coordinates are 1 unit = 1
+meter, and the Y-axis increases upwards. SFML coordinates, however, are more
+conventional computer graphics coordinates: 1 unit = 1 pixel, and the Y-axis
+increased downwards. To add to these troubles, the SFML view (sf::view) has to
+be able to scale (zoom) and move around the world.</p>
+
+&hellip;</p>
+           <p class="readmore"><a href="/2011/12/29/trying-out-box2d.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
+       </section>
+    </article>
+	 
+  
+    <article class="preview post">
+       <header>
+         <h1 class="post-title"><a href="/2011/09/18/storing-data-on-audio-cassette.html">Storing Digital Data on an Audio Cassette</a></h1>
+         <div class="post-meta"><time datetime="18 September, 2011">18 September, 2011</time></div>
+       </header>
+       <section class="post-excerpt post-content">
+         <p><div class="image-left" style="width: 250px;">
+  <img src="/post-content/2011/09/18/storing-data-on-audio-cassette/overview.jpg" />
+  <em>The cassette recorder hooked up to my computer's front audio ports.</em>
+</div>
+
+<p>A few days ago my dad bought a simple audio cassette player/recorder to make a
+digital copy of an old tape recording he had of Pioneer 10 leaving the solar
+system. I had the opportunity to try something I always wanted to try: Storing
+data on an audio cassette. After some researching, I decided to use
+<a href="http://en.wikipedia.org/wiki/Radioteletype">RTTY</a> (Radioteletype). I found an
+awesome program called Digital Master 780, which is part of a freeware Ham
+Radio software package,
+<a href="https://web.archive.org/web/20120720063807/http://wiki.ham-radio-deluxe.com/index.php?title=Main_Page">Ham Radio Deluxe</a>.</p>
+
+<p>To connect the tape player, I needed to use two 3.5mm
+<a href="http://en.wikipedia.org/wiki/TRS_connector">TRS</a> cables, one for my computer
+to hear the cassette player’s output, and another one to send audio to the
+player’s audio input for recording.</p>
+
+<div class="image-right" style="width: 200px;">
+  <img src="/post-content/2011/09/18/storing-data-on-audio-cassette/splice.jpg" />
+  <em>My DIY 3.5mm TRS cable from two earphone cables.</em>
+</div>
+
+<p>Since I only own one cable, I made a second one by using two old earphone
+wires, wire strippers, two alligator clips, and tape. It looks messy, but it
+<a href="/post-content/2011/09/18/storing-data-on-audio-cassette/splice_closeup.jpg">gets the job done</a>!</p>
+
+<p>For reading and writing digital data to the tape, I tried out several audio
+formats that the program could use. Due to the low audio quality that the tape
+can store, I was only able to get away with using RTTY. After further
+experimentation, I decided that these are the best settings I can use:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    100 Baud, 170 Hz shift, 7 bits (ASCII), 2 stop bits.
+</code></pre></div>
+<p>Success! Here’s a video of me writing two paragraphs of “Lorem ispum” text to
+the tape:</p>
+
+&hellip;</p>
+           <p class="readmore"><a href="/2011/09/18/storing-data-on-audio-cassette.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
+       </section>
+    </article>
+	 
+  
+	 
+      <nav class="pagination" role="pagination">
+
+        
+          
+          <a class="newer-posts" href="/" title="Previous Page"><i class="fa fa-chevron-circle-left"></i> Newer</a>
+          
+        
+
+        <span class="page-number"> Page 2 of 2 </span>
+        
+         
+    </nav>
+
+
+	 
+</main>
+
+
+    <footer class="site-footer">
+        <div class="inner">
+             <section class="copyright">&copy; 2017 <a href="/">Drew Gottlieb</a>. All rights reserved.</section>
+             <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19567403-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

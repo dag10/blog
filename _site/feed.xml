@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>Software Developer</description>
+    <link>http://drewgottlieb.net/</link>
+    <atom:link href="http://drewgottlieb.net/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Mixing Reality with Virtual Reality</title>
+        <description>&lt;p&gt;Virtual reality is a pretty magical experience when it comes to making art.
+However, if you have friends in the room watching you, the magic is lost on
+them. They can only see the experience by looking at a distorted preview of the
+player’s perspective on a computer monitor.&lt;/p&gt;
+
+&lt;p&gt;A friend was recently painting a 3D submarine in Tilt Brush. “Look at this
+periscope!” she said. I told her to look closer at it, and I leaned into my
+computer monitor to get a glimpse of what she made.&lt;/p&gt;
+
+&lt;p&gt;We can do better than this. Why do I have to get up off the couch to see what
+my friend is creating? Why can’t I just lean back and see the art floating in
+the middle of the room?&lt;/p&gt;
+
+&lt;p&gt;Until recently, such magic would have been impossible. That is, until Microsoft
+released development kits of their new mixed-reality HoloLens glasses. I’m
+fortunate to have access a couple units, and I really wanted to use mixed
+reality to share in a VR experience.&lt;/p&gt;
+
+&lt;p&gt;So I spent a week making a proof of concept to feel that out. It runs on the
+HTC Vive, a VR system that includes two positionally-tracked controllers.
+Here’s what that looks like:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube-nocookie.com/embed/XPYb2IsZL68&quot; frameborder=&quot;0&quot; allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;I didn’t want to spend a lot of time recreating a 3D painting app like Tilt
+Brush, so I threw together an app in which the VR player uses their controller
+to draw cubes in the air. Simple stuff, since that’s not the interesting part.&lt;/p&gt;
+
+&lt;p&gt;The interesting part is that when the same app runs on a HoloLens, it
+automatically connects to the VR session using Unity’s built-in networking and
+matchmaking service.&lt;/p&gt;
+
+&lt;p&gt;A challenge in this experiment was not just getting the Vive and HoloLens to
+talk to each other, but to bring them to a shared understanding of space. How
+do we align the virtual and room spaces? Ideally this would happen
+automatically, but I couldn’t think of a way to do this just using the
+technology offered by the Vive and HoloLens. Perhaps you could attach tracking
+symbols to the VR base stations? I only had four days to work on this before
+flying away for several months, so I went with a different, quicker solution.
+When the HoloLens app connects to the VR app, the game enters “alignment mode”.
+The HoloLens speaks, prompting the wearer to pick up one of the Vive controllers
+and intersect it with a floating ‘ghost’ controller. Once the real and
+holographic controllers are aligned, the wearer pulls the trigger and the voice
+proudly announces, “You are now aligned.” There’s no limit on how many people
+can join in, and I successfully tested with two HoloLenses participating in the
+same session.&lt;/p&gt;
+
+&lt;p&gt;This quick and dirty solution works better than expected! There are four degrees
+of alignment: three degrees of position, and one degree of rotation around the
+room’s vertical axis. The biggest error comes from slight inaccuracy in rotation
+when aligning the controller. If just one degree off, one won’t really notice
+much misalignment near where the alignment point was, but they’ll see increasing
+misalignment as they move farther away from that point. In the future I can
+reduce this degree of error by prompting the alignment of three points instead
+of just one, and using the position information from these to determine
+rotation, ignoring the controller’s actual rotation at each point.&lt;/p&gt;
+
+&lt;p&gt;Let’s talk about the experience. There are two interesting takeaways from this
+kind of setup.&lt;/p&gt;
+
+&lt;p&gt;First, you can just forget about the VR headset! Just put it down, don the
+HoloLens, grab the controllers, and get to making art – floating in the middle
+of your actual living room, not from some mysterious black void.&lt;/p&gt;
+
+&lt;video autoplay=&quot;&quot; loop=&quot;&quot; style=&quot;max-width: 100%; min-height: 338px;&quot;&gt;&lt;source type=&quot;video/mp4&quot; src=&quot;/post-content/2017/01/31/mixing-reality-with-vr/ar_blocks_min.mp4&quot;&gt;&lt;/video&gt;
+
+&lt;p&gt;Second, people can collaborate in within the same space, across virtual and
+holographic environments. As a spectator with a HoloLens, you can say to the
+VR player “I have an idea, hand me a controller” and then interact with the art
+yourself. Or if you’re ignoring the VR headset entirely and just interacting as
+two people wearing HoloLenses, each of you can take one controller and you can
+build very large shapes – with some communication.&lt;/p&gt;
+
+&lt;video autoplay=&quot;&quot; loop=&quot;&quot; style=&quot;max-width: 100%; min-height: 338px;&quot;&gt;&lt;source type=&quot;video/mp4&quot; src=&quot;/post-content/2017/01/31/mixing-reality-with-vr/ar_collaboration_min.mp4&quot;&gt;&lt;/video&gt;
+
+&lt;p&gt;I have no doubt this kind of mixed space will be a big part of the future,
+especially for creative industries. As virtual and mixed reality become
+stronger platforms for content creation, it’s only inevitable that they’ll be
+able to be interact on a whim.&lt;/p&gt;
+
+&lt;p&gt;If you have a Vive and a HoloLens, feel free to try the project out for
+yourself! Get the source code from GitHub:
+&lt;a href=&quot;https://github.com/dag10/HoloViveObserver&quot;&gt;https://github.com/dag10/HoloViveObserver&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer: One week ago I started an internship at Google working on
+&lt;a href=&quot;https://tiltbrush.com&quot;&gt;Tilt Brush&lt;/a&gt;. This project was my own work from before
+the internship and has no association with Google.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 31 Jan 2017 00:00:00 -0800</pubDate>
+        <link>http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</link>
+        <guid isPermaLink="true">http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</guid>
+      </item>
+    
+      <item>
+        <title>An open-source device for displaying upcoming events</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/post-content/2014/03/02/opensource-event-display/installed.jpg&quot; alt=&quot;Event LCD installed outside lounge.&quot;&gt;
+&lt;em&gt;My upcoming-event display installed outside my dorm’s lounge.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Web and desktop projects are fun, but hardware adds a whole new dimension to
+software projects. I wanted to work on something &lt;em&gt;physical&lt;/em&gt;, and I found the
+perfect application: A device that shows upcoming events on my floor’s lounge.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;I live in the &lt;em&gt;&lt;a href=&quot;http://csh.rit.edu&quot;&gt;Computer Science House&lt;/a&gt;&lt;/em&gt; at RIT and we
+have several special rooms, such as the lounge. We also maintain a shared
+Google Calendar, which is what my device pulls events from.&lt;/p&gt;
+
+&lt;h2&gt;The Hardware&lt;/h2&gt;
+
+&lt;div class=&quot;image-right&quot;&gt;
+  &lt;a href=&quot;http://oshpark.com/shared_projects/OAnGy2k5&quot;&gt;
+    &lt;img src=&quot;/post-content/2014/03/02/opensource-event-display/pcb.png&quot; /&gt;
+  &lt;/a&gt;
+  &lt;em&gt;Render of custom PCB.&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It starts with an &lt;a href=&quot;http://www.amazon.com/gp/product/B005D22FR6/ref=oh_details_o03_s00_i00&quot;&gt;Arduino Ethernet&lt;/a&gt;,
+which is basically an Arduino Uno with the ethernet shield built-in. It also
+comes with a POE (Power over Ethernet) module, which is something I didn’t
+realize existed before this project. For the display, I’m using a 4×20
+character &lt;a href=&quot;http://www.amazon.com/gp/product/B00D7Z2BWU/ref=oh_details_o09_s00_i01&quot;&gt;LCD&lt;/a&gt;,
+based on the popular HD44780 LCD controller. The controller’s popularity
+means that there are many resources and libraries for interfacing with it,
+especially from an Arduino. To conserve pins for future hardware additions,
+such as buttons or RFID readers, I opted to use a &lt;a href=&quot;http://www.ti.com/lit/ds/symlink/sn74ls595.pdf&quot;&gt;74LS595&lt;/a&gt;
+shift register to interface with the LCD. Because of the shift register,
+the wiring, and the required 10k trim potentiometer needed for the contrast
+adjustment, I decided to &lt;a href=&quot;http://oshpark.com/shared_projects/OAnGy2k5&quot;&gt;create&lt;/a&gt;
+a printed circuit board to bridge the LCD module with the LCD.&lt;/p&gt;
+
+&lt;p&gt;Finally, I found an old, plastic “project enclosure” laying around. I have no
+idea where it came from, but it was the perfect size for my electronics. After
+some dremeling, it had holes for the LCD and the ethernet port.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/post-content/2014/03/02/opensource-event-display/inside.jpg&quot; alt=&quot;Inside of device&quot;&gt;
+&lt;em&gt;The assembled device without the back cover.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, up on the wall it goes. I ran cat5e cable in the ceiling from the
+lounge to my floor’s networking room, and mounted a raceway on the wall to
+hide the cable. In the networking room, I installed the power-over-ethernet
+injector, and the device sprang to life.&lt;/p&gt;
+
+&lt;h2&gt;The Software&lt;/h2&gt;
+
+&lt;p&gt;There are two programs: The Arduino program written in C++, and a server-side
+web server written in Python, using the &lt;a href=&quot;http://flask.pocoo.org/&quot;&gt;Flask&lt;/a&gt; web
+framework. The server connects to the Google calendar and gets the next events
+in a requested location. Then it outputs the text exactly as the LCD should
+display it.&lt;/p&gt;
+
+&lt;p&gt;I was originally going to have the server return JSON data of the upcoming
+events, and the Arduino would parse this data and format it for the screen.
+This was before I realized that the ATmega328 has only 2K of RAM, which is
+simply not enough for both an HTTP client and a JSON parser. This is why I
+decided to offload the text formatting to the server itself. I later realized
+an additional benefit this adds: I can tweak what the LCD displays without
+having to update the firmware or touch the device in any way.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;More details and instructions on how to build your own can be found in the
+project’s readme on GitHub: More details and instructions on how to build your
+own can be found in the project’s readme on GitHub:
+&lt;a href=&quot;https://github.com/dag10/EventLCD&quot;&gt;https://github.com/dag10/EventLCD&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 02 Mar 2014 00:00:00 -0800</pubDate>
+        <link>http://drewgottlieb.net/2014/03/02/opensource-event-display.html</link>
+        <guid isPermaLink="true">http://drewgottlieb.net/2014/03/02/opensource-event-display.html</guid>
+      </item>
+    
+      <item>
+        <title>Recreating my TV graphics program from the ground up with Qt</title>
+        <description>&lt;div class=&quot;image-left&quot;&gt;
+  &lt;img src=&quot;/post-content/2014/02/27/recreating-tv-graphics-program/launch.png&quot; /&gt;
+  &lt;em&gt;The launch screen of the new program.&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As a sophomore two years ago, I created a
+&lt;a href=&quot;https://github.com/dag10/tetv-graphics/tree/old&quot;&gt;program to generate the live scoreboard graphics&lt;/a&gt;
+for my high school’s television sports broadcasts. At the time, I knew C# and
+Windows Forms most comfortably, so I used those technologies to build the
+software. There is a &lt;a href=&quot;/post-content/2014/02/27/recreating-tv-graphics-program/main-control-window.png&quot;&gt;main control window&lt;/a&gt;,
+and then a second full-screen &lt;a href=&quot;/post-content/2014/02/27/recreating-tv-graphics-program/output-window.png&quot;&gt;window&lt;/a&gt;
+which outputs to a second monitor showing the graphics over a black
+background. We take the output to the “second monitor” and apply
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Luma_key&quot;&gt;luma key&lt;/a&gt; to remove the black
+background. Then we overlay the transparent graphics on our video feed.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;As I added more functionality over the last two years, Windows Forms became
+harder to work with. Having worked closely with Qt for the last few months, I
+decided that C++ and Qt would be a far better solution for this type of
+program. I am currently making progress on an full re-write that will far more
+sophisticated than the previous version of my software.&lt;/p&gt;
+
+&lt;p&gt;One new feature is the program’s support for controlling the graphics from
+more than one computer. It can launch in either a slave mode or a master mode.
+As the master, the program will render and output the actual graphics. As a
+slave, the program will connect to the master over the local network to
+control the graphics remotely.&lt;/p&gt;
+
+&lt;p&gt;Implementing this functionality is a lot of fun. At the time of writing this,
+I have implemented the networking code, and created a packet system that is
+expandable using abstract handlers that can register as a handler for specific
+packet types. You can see this in action with the
+&lt;a href=&quot;https://github.com/dag10/tetv-graphics/blob/master/tetv-graphics/tetv-graphics/net/AbstractNetHandler.h&quot;&gt;latest branch&lt;/a&gt;.
+Next, I’ll be creating a set of control widgets (text boxes, check boxes,
+spin boxes, etc.) that when a value is updated by the user, the same value is
+updated on the master and all other slaves.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/post-content/2014/02/27/recreating-tv-graphics-program/layout.png&quot;&gt;&lt;img src=&quot;/post-content/2014/02/27/recreating-tv-graphics-program/layout.png&quot; alt=&quot;Layout&quot; title=&quot;Three-column layout.&quot;&gt;&lt;/a&gt;
+&lt;em&gt;Three-column layout, and a panel showing connected slaves.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;As another new feature, graphics will be sent wirelessly. Since our TV studio
+uses the
+&lt;a href=&quot;http://www.newtek.com/&quot;&gt;NewTek&lt;/a&gt; TriCaster video switcher, I got in touch with
+NewTek and obtained a license to use their SDK. With it, I’ll be able to have
+my graphics stream directly to the video switcher over the local network,
+transparency included. This will be easier to integrate with my new program
+than with the old version because, like my program, the SDK is C++-based.
+Additionally, Qt makes it easy to capture raw image data from graphic widgets.
+Because I’ll be sending the graphics frames over the network with an alpha
+channel, instead of sending it with a black background over a video signal,
+I’ll be able to add more exciting graphics animations, such as fades.&lt;/p&gt;
+
+&lt;p&gt;In all, I’m looking forward to this being one of the most functional and
+beautiful programs I’ve written so far. When I graduate from my high school
+in a few months, I want to leave the TV studio with the best possible graphics
+program.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 27 Feb 2014 00:00:00 -0800</pubDate>
+        <link>http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</link>
+        <guid isPermaLink="true">http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</guid>
+      </item>
+    
+      <item>
+        <title>Winning a Trip to The Googleplex</title>
+        <description>&lt;div class=&quot;image-left&quot;&gt;
+  &lt;img src=&quot;/post-content/2013/02/04/winning-trip-to-googleplex/gci.png&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I just won a free trip to the Google Headquarters. How did I do it?&lt;/p&gt;
+
+&lt;p&gt;For the last three years, Google has run an international programming
+competition,
+&lt;a href=&quot;https://google-melange.appspot.com/gci/document/show/gci_program/google/gci2012/about_page&quot;&gt;Google Code-In&lt;/a&gt;,
+for pre-university students between the ages of 13 and 17. There are ten
+open-source software organizations that take part and create sets of
+programming &lt;a href=&quot;https://google-melange.appspot.com/gci/tasks/google/gci2012&quot;&gt;tasks&lt;/a&gt;,
+usually requiring the student to write a small amount of code. After
+completing one task, students earn a certificate that will be mailed to them.
+After completing three tasks, students win a Google t-shirt.&lt;/p&gt;
+
+&lt;p&gt;What’s most interesting, however, is the grand prize. Each of the ten
+organizations name two students as grand prize winners, making a total of
+twenty winners. A winner receives a four-night all-expenses-paid trip to
+Google’s headquarters (a.k.a. The
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Googleplex&quot;&gt;Googleplex&lt;/a&gt;) in Mountain View,
+California. The winners get to speak with Google engineers, tour Google, visit
+San Francisco, and receive additional prizes (swag); last year’s winners each
+received a Galaxy Nexus smart phone!&lt;/p&gt;
+
+&lt;div class=&quot;image-right&quot;&gt;
+  &lt;a href=&quot;http://hedgewars.org&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;/post-content/2013/02/04/winning-trip-to-googleplex/hedgewars.png&quot; /&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When I discovered this competition on December 1st — a few days after it began
+— I thought “well this would be a fun way to win a free t-shirt!” And so I
+began contributing code to a game called &lt;a href=&quot;http://hedgewars.org&quot;&gt;Hedgewars&lt;/a&gt;,
+completing tasks. Within a few days, I earned my shirt, but I didn’t feel like
+stopping. I didn’t even have the grand prize in mind; I was making significant
+&lt;a href=&quot;http://hedgewars.org/node/4612&quot;&gt;contributions&lt;/a&gt; to the game and its main
+developers were loving my work. It was too rewarding to stop.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;24 hours before the contest ended, I decided to re-read the rules of the
+competition. In doing so, I discovered that only the top-five students within
+each organization are considered for the grand prize — of which two will win.&lt;/p&gt;
+
+&lt;p&gt;I was in 6th place.&lt;/p&gt;
+
+&lt;p&gt;The most intense all-nighter of my life happened on the morning of January
+14th, 2013. Yep, that’s a Monday. I may have called in sick to school.
+Adrenaline flowing, I completed more tasks in the last 24 hours of the
+competition than I have in the first seven weeks. Arc Riley, the head of the
+organization,
+&lt;a href=&quot;https://plus.google.com/109741359399131092509/posts/XaryX4jXEdk&quot;&gt;took notice&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I made 5th place, and felt fantastic. Perhaps partly due to the residual
+adrenaline. I was satisfied that I
+&lt;a href=&quot;https://plus.google.com/109741359399131092509/posts/3WxBzWjbF6W&quot;&gt;made it as a finalist&lt;/a&gt;,
+because otherwise I would have automatically lost any chance of winning the
+grand prize, and all of my work would have been for nothing. Well, not
+nothing, but you know what I mean.&lt;/p&gt;
+
+&lt;p&gt;I participated in this competition just to win a t-shirt, and ended up a
+finalist, which by itself is good enough for me. But then
+&lt;strong&gt;&lt;a href=&quot;http://google-opensource.blogspot.com/2013/02/google-code-in-2012-grand-prize-winners.html&quot;&gt;I won&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Feb 2013 00:00:00 -0800</pubDate>
+        <link>http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</link>
+        <guid isPermaLink="true">http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</guid>
+      </item>
+    
+      <item>
+        <title>Real-time User Count Without Any Javascript</title>
+        <description>&lt;div class=&quot;image-left&quot;&gt;
+  &lt;img src=&quot;http://drewgottlieb.net:9192/online.png&quot; /&gt;
+  &lt;em&gt;Live Demonstration&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;p&gt;IP cameras are frequently streamed as
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Motion_JPEG#M-JPEG_over_HTTP&quot;&gt;M-JPEG&lt;/a&gt; over HTTP
+connections. Why not use the same principle for other uses, too? Although
+M-JPEG streaming doesn’t work in Internet Explorer, it can still be useful.&lt;/p&gt;
+
+&lt;p&gt;The underlying protocol is simply a multipart HTTP request using the
+&lt;a href=&quot;http://en.wikipedia.org/wiki/MIME#Mixed-Replace&quot;&gt;x-mixed-replace&lt;/a&gt;
+content type. Basically, the server sends the document (or in this case, image)
+multiple times, with each part replacing the previous part. So when an IP
+camera is streaming, it’s just sending multiple jpeg images that each replace
+the previous image.&lt;/p&gt;
+
+&lt;p&gt;It looks like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 200 Ok
+Content-Type: multipart/x-mixed-replace; boundary=--icecream
+
+--icecream
+Content-Type: image/jpeg
+Content-Length: [length]
+
+[data]
+
+--icecream
+Content-Type: image/jpeg
+Content-Length: [length]
+
+[data]
+
+--icecream
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(and so on)&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;In this bare-bones example, the boundary is &lt;em&gt;icecream&lt;/em&gt;, but ideally you’d want
+to use something that won’t appear in the data itself. Also, the content-type
+can be anything, such as image/png.&lt;/p&gt;
+
+&lt;p&gt;While learning about this, a practical application immediately came to mind: a
+real time online-users counter — such as the one above. This method is great
+for this use because it fills two roles. First, it keeps a persistent
+connection between the client and server, so we know when a user connects and
+when that user disconnects. Second, it can display the user count in real-time
+without requiring any page updates. This system can be used in places where
+Javascript is not an option, such as on a forum.&lt;/p&gt;
+
+&lt;p&gt;I made it using &lt;a href=&quot;http://nodejs.org&quot;&gt;Node.js&lt;/a&gt;, with
+&lt;a href=&quot;http://backbonejs.org&quot;&gt;Backbone.js&lt;/a&gt;, and
+&lt;a href=&quot;https://github.com/learnboost/node-canvas/&quot;&gt;node-canvas&lt;/a&gt; — which unfortunately
+does not work on Windows. If you’re familiar with Backbone, the code should be
+rather self-explanatory.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/dag10/48e6d25415ca92318815&quot;&gt;Here is the source&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I can see some neat uses for this type of image, since content can be made
+interactive without the use of client-side scripts. Interactivity can be
+introduced by having links with the server returning &lt;em&gt;HTTP 204&lt;/em&gt; No Content,
+such as &lt;a href=&quot;http://httpstat.us/204&quot;&gt;this link&lt;/a&gt; (provided by
+&lt;a href=&quot;http://httpstat.us&quot;&gt;httpstat.us&lt;/a&gt;). The client won’t go to a new page, but the
+server will be aware of the client’s request and can perform an action. With
+this, real-time tic-tac-toe or even hang-man is possible.&lt;/p&gt;
+
+&lt;p&gt;Just some thoughts.&lt;/p&gt;
+
+&lt;p&gt;You can follow discussion of this post on
+&lt;a href=&quot;https://news.ycombinator.com/item?id=4307126&quot;&gt;Hacker News&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;strong&gt;(03:28 EST) Update:&lt;/strong&gt; Through experimentation, I just discovered that
+unfortunately, it is not possible to combine HTTP 204 links with image
+streams, as I suggested in my last paragraph. Upon clicking any link, the
+browser stops loading all resources, including streams. This is before it even
+knows that the result status will be 204. What a bummer.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 29 Jul 2012 00:00:00 -0700</pubDate>
+        <link>http://drewgottlieb.net/2012/07/29/real-time-user-count.html</link>
+        <guid isPermaLink="true">http://drewgottlieb.net/2012/07/29/real-time-user-count.html</guid>
+      </item>
+    
+      <item>
+        <title>Trying out Box2d</title>
+        <description>&lt;div class=&quot;image-right&quot;&gt;
+  &lt;img width=&quot;300&quot; src=&quot;/post-content/2011/12/29/trying-out-box2d/box2d-dominoes.png&quot; /&gt;
+  &lt;em&gt;Dominoes falling towards a house.&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What is Box2D? It’s a
+&lt;a href=&quot;http://box2d.org/about&quot;&gt;free and open source 2D physics engine&lt;/a&gt;. It is
+developed with C++, and has fortunately been ported to many other languages,
+including Actionscript and Java. I was eager to try it out.&lt;/p&gt;
+
+&lt;p&gt;At the same time, I was eager to get more familiar with the new
+&lt;a href=&quot;http://en.wikipedia.org/wiki/C++11&quot;&gt;C++11&lt;/a&gt; standard I’ve been hearing about
+(a.k.a. C++0x). So I made a small program to get a taste of Box2D and C++11
+features. You can view and download the program
+&lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo/releases/tag/v1.0&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To use it, drag out a rectangle with your mouse. When you release the mouse,
+the rectangle becomes a object in the world. It is affected by gravity, and
+interacts realistically with other objects. If you happen to own a touch
+screen, you can press space to hide the mouse cursor. You’re welcome.&lt;/p&gt;
+
+&lt;p&gt;Mixing Box2D with SFML graphics was a quite tricky. To keep track of the
+objects, I created an std::vector of this struct:&lt;/p&gt;
+
+&lt;div class=&quot;code-leadin&quot;&gt;
+  &lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo/blob/f3238b80/include/Environment.h#L19&quot;&gt;
+    Environment.h:19
+  &lt;/a&gt; (rev f3238b80)
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;shared_ptr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;shared_ptr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PhysicsObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There was a problem though: The Box2D world’s coordinates are 1 unit = 1
+meter, and the Y-axis increases upwards. SFML coordinates, however, are more
+conventional computer graphics coordinates: 1 unit = 1 pixel, and the Y-axis
+increased downwards. To add to these troubles, the SFML view (sf::view) has to
+be able to scale (zoom) and move around the world.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;To overcome this issue, I did two things. First, I made the Environment class
+update an internal static sf::view during each render, representing what view
+should be rendered to the window. However, I always keep the window’s view the
+default view. The internal sf::view is only for the second thing I did: I made
+two static functions in the Environment for translating world coordinates to
+screen coordinates, and vice versa.&lt;/p&gt;
+
+&lt;div class=&quot;code-leadin&quot;&gt;
+  &lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo/blob/f3238b80/src/Environment.cpp#L113&quot;&gt;
+    Environment.cpp:113
+  &lt;/a&gt; (rev f3238b80)
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/*&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt; * Translate screen coordinates into world coordinates&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt; */&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b2Vec2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ScreenToWorldPosition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b2Vec2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pixelsPerMeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixelsPerMeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetCenter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetHalfSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetCenter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetHalfSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/*&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt; * Translate world coordinates into screen coordinates&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt; */&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b2Vec2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorldToScreenPosition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b2Vec2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetCenter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetHalfSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetCenter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetHalfSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pixelsPerMeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixelsPerMeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;With that, all I had to do to render them is iterate through all PhysicsObject
+elements in the vector, update the scale of the sf::Shape, update the position
+and rotation (while converting radians to degrees), and draw it to the
+supplied sf::RenderTarget:&lt;/p&gt;
+
+&lt;div class=&quot;code-leadin&quot;&gt;
+  &lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo/blob/f3238b80/src/Environment.cpp#L67&quot;&gt;
+    Environment.cpp:67
+  &lt;/a&gt; (rev f3238b80)
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/* Render objects */&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shared_ptr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;b2Vec2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WorldToScreenPosition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetPosition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graphic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetScale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pixelsPerMeter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zoomFactor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pixelsPerMeter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zoomFactor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graphic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetPosition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graphic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetRotation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rad2deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetAngle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()));&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Draw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graphic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And voilà!&lt;/p&gt;
+
+&lt;p&gt;As for C++11, I got a pretty nice taste of it. My favorite feature is the
+&lt;a href=&quot;http://en.cppreference.com/w/cpp/memory/unique_ptr&quot;&gt;smart pointer&lt;/a&gt;, which owns
+and manages pointers and object instances. In particular,
+&lt;a href=&quot;http://en.cppreference.com/w/cpp/memory/shared_ptr&quot;&gt;shared_ptr&lt;/a&gt; allows you to
+easily set a custom destroy function in the form of a
+&lt;a href=&quot;http://en.cppreference.com/w/cpp/language/lambda&quot;&gt;lambda&lt;/a&gt; — another C++11
+feature I love. Here’s one line of my program that uses both of these features
+nicely, and even uses &lt;a href=&quot;http://en.cppreference.com/w/cpp/language/auto&quot;&gt;auto&lt;/a&gt; —
+another syntactical gift provided by the new standard):&lt;/p&gt;
+
+&lt;div class=&quot;code-leadin&quot;&gt;
+  &lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo/blob/f3238b80/src/Environment.cpp#L101&quot;&gt;
+    Environment.cpp:101
+  &lt;/a&gt; (rev f3238b80)
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Will be automatically destroyed by world&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shared_ptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CreateBody&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blockDef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b2Body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DestroyBody&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The line above creates a shared_ptr containing a b2Body — a rigid body in the
+Box2D engine. It also sets and implements a custom destroy function. You can’t
+simply delete a b2Body instance; you must pass it to the b2World’s DestroyBody
+method instead. And that’s what this destroy function does. I can now continue
+to write code worry-free, knowing that as soon as body is no longer in use,
+the world will be asked to destroy it!&lt;/p&gt;
+
+&lt;p&gt;I’m might be misusing some smart pointers in my code. I’m still learning how to
+appropriately use them.&lt;/p&gt;
+
+&lt;p&gt;The project is found &lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can download a Windows binary
+&lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo/releases&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 29 Dec 2011 00:00:00 -0800</pubDate>
+        <link>http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</link>
+        <guid isPermaLink="true">http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</guid>
+      </item>
+    
+      <item>
+        <title>Storing Digital Data on an Audio Cassette</title>
+        <description>&lt;div class=&quot;image-left&quot; style=&quot;width: 250px;&quot;&gt;
+  &lt;img src=&quot;/post-content/2011/09/18/storing-data-on-audio-cassette/overview.jpg&quot; /&gt;
+  &lt;em&gt;The cassette recorder hooked up to my computer&#39;s front audio ports.&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A few days ago my dad bought a simple audio cassette player/recorder to make a
+digital copy of an old tape recording he had of Pioneer 10 leaving the solar
+system. I had the opportunity to try something I always wanted to try: Storing
+data on an audio cassette. After some researching, I decided to use
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Radioteletype&quot;&gt;RTTY&lt;/a&gt; (Radioteletype). I found an
+awesome program called Digital Master 780, which is part of a freeware Ham
+Radio software package,
+&lt;a href=&quot;https://web.archive.org/web/20120720063807/http://wiki.ham-radio-deluxe.com/index.php?title=Main_Page&quot;&gt;Ham Radio Deluxe&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To connect the tape player, I needed to use two 3.5mm
+&lt;a href=&quot;http://en.wikipedia.org/wiki/TRS_connector&quot;&gt;TRS&lt;/a&gt; cables, one for my computer
+to hear the cassette player’s output, and another one to send audio to the
+player’s audio input for recording.&lt;/p&gt;
+
+&lt;div class=&quot;image-right&quot; style=&quot;width: 200px;&quot;&gt;
+  &lt;img src=&quot;/post-content/2011/09/18/storing-data-on-audio-cassette/splice.jpg&quot; /&gt;
+  &lt;em&gt;My DIY 3.5mm TRS cable from two earphone cables.&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Since I only own one cable, I made a second one by using two old earphone
+wires, wire strippers, two alligator clips, and tape. It looks messy, but it
+&lt;a href=&quot;/post-content/2011/09/18/storing-data-on-audio-cassette/splice_closeup.jpg&quot;&gt;gets the job done&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;For reading and writing digital data to the tape, I tried out several audio
+formats that the program could use. Due to the low audio quality that the tape
+can store, I was only able to get away with using RTTY. After further
+experimentation, I decided that these are the best settings I can use:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;    100 Baud, 170 Hz shift, 7 bits (ASCII), 2 stop bits.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Success! Here’s a video of me writing two paragraphs of “Lorem ispum” text to
+the tape:&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube-nocookie.com/embed/BMVO4X5u-gE?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;And here&amp;#39;s a video of me reading the data back:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube-nocookie.com/embed/EfcOOFiPw4w?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;And here’s the &lt;a href=&quot;/post-content/2011/09/18/storing-data-on-audio-cassette/sample.ogg&quot;&gt;audio&lt;/a&gt; if want to know what it
+sounds like, or even decode it yourself: &lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;120&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/23632022&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_artwork=true&quot;&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;Although slow, I just &lt;em&gt;had&lt;/em&gt; to try storing a file on it. I took a low-quality
+70-70 pixel .gif image and used this
+&lt;a href=&quot;http://www.motobit.com/util/base64-decoder-encoder.asp&quot;&gt;online tool&lt;/a&gt; to
+convert it into copyable Base64-encoded text. It took about ten minutes for it
+to write the data to the cassette, and it used up half of the tape! After a
+ten-minute reading of the tape, I was able to use the same website to convert
+the Base64-encoded file back into its original form. It worked!&lt;/p&gt;
+
+&lt;p&gt;So what can I conclude about storing data on an audio cassette? It’s possible,
+but it’s extremely slow and space-consuming. If anything, it’s only good for
+storing text, as even the smallest files will consume half of your tape if
+you’re using Base64-encoding and RTTY-100.&lt;/p&gt;
+
+&lt;p&gt;What I did is not new, by the way. Some of the first desktops and early
+microcomputers
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Compact_Cassette#Data_recording&quot;&gt;used cassettes for data storage&lt;/a&gt;.
+The difference, however, is that they did not use RTTY (which was designed for
+over-the-air text communications), and instead used
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Frequency-shift_keying&quot;&gt;FSK&lt;/a&gt;
+(Frequency-shift Keying). As noted on Wikipedia, they could transfer data as a
+rate up to 2000 bits/s, which results in a 660Kb capacity for a 90-minute tape.&lt;/p&gt;
+
+&lt;p&gt;n 2011, storing data on audio cassettes is pointless and impractical. However,
+if you happen to have a tape and a tape recorder, it’s pretty fun to do it
+anyway.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 18 Sep 2011 00:00:00 -0700</pubDate>
+        <link>http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</link>
+        <guid isPermaLink="true">http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</guid>
+      </item>
+    
+  </channel>
+</rss>
