@@ -101,7 +101,7 @@ yourself! Get the source code from GitHub:
 &lt;a href=&quot;https://tiltbrush.com&quot;&gt;Tilt Brush&lt;/a&gt;. This project was my own work from before
 the internship and has no association with Google.&lt;/em&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 31 Jan 2017 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 31 Jan 2017 00:00:00 -0500</pubDate>
         <link>http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</link>
         <guid isPermaLink="true">http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</guid>
       </item>
@@ -179,7 +179,7 @@ project’s readme on GitHub: More details and instructions on how to build your
 own can be found in the project’s readme on GitHub:
 &lt;a href=&quot;https://github.com/dag10/EventLCD&quot;&gt;https://github.com/dag10/EventLCD&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 02 Mar 2014 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 02 Mar 2014 00:00:00 -0500</pubDate>
         <link>http://drewgottlieb.net/2014/03/02/opensource-event-display.html</link>
         <guid isPermaLink="true">http://drewgottlieb.net/2014/03/02/opensource-event-display.html</guid>
       </item>
@@ -245,7 +245,7 @@ beautiful programs I’ve written so far. When I graduate from my high school
 in a few months, I want to leave the TV studio with the best possible graphics
 program.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 27 Feb 2014 00:00:00 -0800</pubDate>
+        <pubDate>Thu, 27 Feb 2014 00:00:00 -0500</pubDate>
         <link>http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</link>
         <guid isPermaLink="true">http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</guid>
       </item>
@@ -317,7 +317,7 @@ nothing, but you know what I mean.&lt;/p&gt;
 finalist, which by itself is good enough for me. But then
 &lt;strong&gt;&lt;a href=&quot;http://google-opensource.blogspot.com/2013/02/google-code-in-2012-grand-prize-winners.html&quot;&gt;I won&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 04 Feb 2013 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 04 Feb 2013 00:00:00 -0500</pubDate>
         <link>http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</link>
         <guid isPermaLink="true">http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</guid>
       </item>
@@ -404,7 +404,7 @@ streams, as I suggested in my last paragraph. Upon clicking any link, the
 browser stops loading all resources, including streams. This is before it even
 knows that the result status will be 204. What a bummer.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 29 Jul 2012 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 29 Jul 2012 00:00:00 -0400</pubDate>
         <link>http://drewgottlieb.net/2012/07/29/real-time-user-count.html</link>
         <guid isPermaLink="true">http://drewgottlieb.net/2012/07/29/real-time-user-count.html</guid>
       </item>
@@ -550,7 +550,7 @@ appropriately use them.&lt;/p&gt;
 &lt;p&gt;You can download a Windows binary
 &lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo/releases&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 29 Dec 2011 00:00:00 -0800</pubDate>
+        <pubDate>Thu, 29 Dec 2011 00:00:00 -0500</pubDate>
         <link>http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</link>
         <guid isPermaLink="true">http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</guid>
       </item>
@@ -636,7 +636,7 @@ rate up to 2000 bits/s, which results in a 660Kb capacity for a 90-minute tape.&
 if you happen to have a tape and a tape recorder, it’s pretty fun to do it
 anyway.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 18 Sep 2011 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 18 Sep 2011 00:00:00 -0400</pubDate>
         <link>http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</link>
         <guid isPermaLink="true">http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</guid>
       </item>

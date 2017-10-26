@@ -3,16 +3,18 @@ layout: page
 title: About me
 ---
 
-I have a passion for creating meaningful and delightful experiences with
+I have a passion for creating meaningful and magical experiences with
 software and hardware. Focused on empowering content creation and creativity,
 and computing that feels human.
 
-My projects have used C, C++, C#, Python, Javascript, C#, Java, and PHP. 
+I'll be joining Valve in Summer 2018 to work on virtual reality.
+
+My projects have used C, C++, C#, Python, Javascript, C#, Java, and PHP.
 
 Places I can be found:
 - [GitHub](https://github.com/dag10)
-- [LinkedIn](http://linkedin.com/in/drewgottlieb)
 - [Facebook](http://facebook.com/drew.gottlieb)
+- [LinkedIn](http://linkedin.com/in/drewgottlieb)
 
 You can also [read my resume](/resume.pdf).
 
