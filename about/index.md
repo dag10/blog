@@ -7,7 +7,7 @@ I have a passion for creating meaningful and magical experiences with
 software and hardware. Focused on empowering content creation and creativity,
 and computing that feels human.
 
-I'll be joining Valve in Summer 2018 to work on virtual reality.
+I'll be joining Valve full-time starting Summer 2018 to work on virtual reality.
 
 My projects have used C, C++, C#, Python, Javascript, C#, Java, and PHP.
 
