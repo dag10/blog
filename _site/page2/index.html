@@ -44,13 +44,64 @@
 <main class="content" role="main">
 
   
-    <article class="preview post">
-       <header>
-         <h1 class="post-title"><a href="/2011/12/29/trying-out-box2d.html">Trying out Box2d</a></h1>
-         <div class="post-meta"><time datetime="29 December, 2011">29 December, 2011</time></div>
-       </header>
-       <section class="post-excerpt post-content">
-         <p><div class="image-right">
+    
+      <article class="preview post">
+         <header>
+           <h1 class="post-title"><a href="/2012/07/29/real-time-user-count.html">Real-time User Count Without Any Javascript</a></h1>
+           <div class="post-meta"><time datetime="29 July, 2012">29 July, 2012</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><div class="image-left">
+  <img src="http://drewgottlieb.net:9192/online.png" />
+  <em>Live Demonstration</em>
+</div>
+
+<p>IP cameras are frequently streamed as
+<a href="http://en.wikipedia.org/wiki/Motion_JPEG#M-JPEG_over_HTTP">M-JPEG</a> over HTTP
+connections. Why not use the same principle for other uses, too? Although
+M-JPEG streaming doesn’t work in Internet Explorer, it can still be useful.</p>
+
+<p>The underlying protocol is simply a multipart HTTP request using the
+<a href="http://en.wikipedia.org/wiki/MIME#Mixed-Replace">x-mixed-replace</a>
+content type. Basically, the server sends the document (or in this case, image)
+multiple times, with each part replacing the previous part. So when an IP
+camera is streaming, it’s just sending multiple jpeg images that each replace
+the previous image.</p>
+
+<p>It looks like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">HTTP/1.1 200 Ok
+Content-Type: multipart/x-mixed-replace; boundary=--icecream
+
+--icecream
+Content-Type: image/jpeg
+Content-Length: [length]
+
+[data]
+
+--icecream
+Content-Type: image/jpeg
+Content-Length: [length]
+
+[data]
+
+--icecream
+</code></pre></div>
+<p>(and so on)</p>
+
+&hellip;</p>
+             <p class="readmore"><a href="/2012/07/29/real-time-user-count.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
+         </section>
+      </article>
+    
+  
+    
+      <article class="preview post">
+         <header>
+           <h1 class="post-title"><a href="/2011/12/29/trying-out-box2d.html">Trying out Box2d</a></h1>
+           <div class="post-meta"><time datetime="29 December, 2011">29 December, 2011</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><div class="image-right">
   <img width="300" src="/post-content/2011/12/29/trying-out-box2d/box2d-dominoes.png" />
   <em>Dominoes falling towards a house.</em>
 </div>
@@ -91,18 +142,19 @@ increased downwards. To add to these troubles, the SFML view (sf::view) has to
 be able to scale (zoom) and move around the world.</p>
 
 &hellip;</p>
-           <p class="readmore"><a href="/2011/12/29/trying-out-box2d.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
-       </section>
-    </article>
-	 
+             <p class="readmore"><a href="/2011/12/29/trying-out-box2d.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
+         </section>
+      </article>
+    
   
-    <article class="preview post">
-       <header>
-         <h1 class="post-title"><a href="/2011/09/18/storing-data-on-audio-cassette.html">Storing Digital Data on an Audio Cassette</a></h1>
-         <div class="post-meta"><time datetime="18 September, 2011">18 September, 2011</time></div>
-       </header>
-       <section class="post-excerpt post-content">
-         <p><div class="image-left" style="width: 250px;">
+    
+      <article class="preview post">
+         <header>
+           <h1 class="post-title"><a href="/2011/09/18/storing-data-on-audio-cassette.html">Storing Digital Data on an Audio Cassette</a></h1>
+           <div class="post-meta"><time datetime="18 September, 2011">18 September, 2011</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><div class="image-left" style="width: 250px;">
   <img src="/post-content/2011/09/18/storing-data-on-audio-cassette/overview.jpg" />
   <em>The cassette recorder hooked up to my computer's front audio ports.</em>
 </div>
@@ -140,12 +192,12 @@ experimentation, I decided that these are the best settings I can use:</p>
 the tape:</p>
 
 &hellip;</p>
-           <p class="readmore"><a href="/2011/09/18/storing-data-on-audio-cassette.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
-       </section>
-    </article>
-	 
+             <p class="readmore"><a href="/2011/09/18/storing-data-on-audio-cassette.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
+         </section>
+      </article>
+    
   
-	 
+
       <nav class="pagination" role="pagination">
 
         
@@ -160,7 +212,7 @@ the tape:</p>
     </nav>
 
 
-	 
+
 </main>
 
 

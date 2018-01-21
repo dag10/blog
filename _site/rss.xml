@@ -8,7 +8,18 @@
     <title>Drew Gottlieb</title>
     <link>http://drewgottlieb.net</link>
     <description>Software Developer</description>
-    <pubDate>Tue, 31 Jan 2017 00:00:00 -0500</pubDate>
+    <pubDate>Sun, 21 Jan 2018 00:00:00 -0500</pubDate>
+    <item>
+      <title>Setting The Scene</title>
+      <link>http://drewgottlieb.net/giclass/2018/01/21/gi-setting-the-scene.html</link>
+      <description>&lt;p&gt;To create and preview the geometry layout for my Global Illumination scene,
+I branched my toy OpenGL engine and created a scene. The source code for the
+scene is on my GitHub in
+&lt;a href=&quot;https://github.com/dag10/DrewGraphics/blob/giclasslayout/src/scenes/LayoutScene.cpp&quot;&gt;LayoutScene.cpp&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 -0500</pubDate>
+      <dc:date>2018-01-21T00:00:00-05:00</dc:date>
+    </item>
     <item>
       <title>Mixing Reality with Virtual Reality</title>
       <link>http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</link>
@@ -99,6 +110,6 @@ Here’s what that looks like:&lt;/p&gt;
       <pubDate>Sun, 18 Sep 2011 00:00:00 -0400</pubDate>
       <dc:date>2011-09-18T00:00:00-04:00</dc:date>
     </item>
-    <dc:date>2017-01-31T00:00:00-05:00</dc:date>
+    <dc:date>2018-01-21T00:00:00-05:00</dc:date>
   </channel>
 </rss>

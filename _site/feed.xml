@@ -6,9 +6,12 @@
     <link>http://drewgottlieb.net/</link>
     <atom:link href="http://drewgottlieb.net/feed.xml" rel="self" type="application/rss+xml" />
     
-      <item>
-        <title>Mixing Reality with Virtual Reality</title>
-        <description>&lt;p&gt;Virtual reality is a pretty magical experience when it comes to making art.
+      
+    
+      
+        <item>
+          <title>Mixing Reality with Virtual Reality</title>
+          <description>&lt;p&gt;Virtual reality is a pretty magical experience when it comes to making art.
 However, if you have friends in the room watching you, the magic is lost on
 them. They can only see the experience by looking at a distorted preview of the
 player’s perspective on a computer monitor.&lt;/p&gt;
@@ -101,14 +104,16 @@ yourself! Get the source code from GitHub:
 &lt;a href=&quot;https://tiltbrush.com&quot;&gt;Tilt Brush&lt;/a&gt;. This project was my own work from before
 the internship and has no association with Google.&lt;/em&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 31 Jan 2017 00:00:00 -0500</pubDate>
-        <link>http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</link>
-        <guid isPermaLink="true">http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</guid>
-      </item>
+          <pubDate>Tue, 31 Jan 2017 00:00:00 -0500</pubDate>
+          <link>http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</link>
+          <guid isPermaLink="true">http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</guid>
+        </item>
+      
     
-      <item>
-        <title>An open-source device for displaying upcoming events</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/post-content/2014/03/02/opensource-event-display/installed.jpg&quot; alt=&quot;Event LCD installed outside lounge.&quot;&gt;
+      
+        <item>
+          <title>An open-source device for displaying upcoming events</title>
+          <description>&lt;p&gt;&lt;img src=&quot;/post-content/2014/03/02/opensource-event-display/installed.jpg&quot; alt=&quot;Event LCD installed outside lounge.&quot;&gt;
 &lt;em&gt;My upcoming-event display installed outside my dorm’s lounge.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Web and desktop projects are fun, but hardware adds a whole new dimension to
@@ -179,14 +184,16 @@ project’s readme on GitHub: More details and instructions on how to build your
 own can be found in the project’s readme on GitHub:
 &lt;a href=&quot;https://github.com/dag10/EventLCD&quot;&gt;https://github.com/dag10/EventLCD&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 02 Mar 2014 00:00:00 -0500</pubDate>
-        <link>http://drewgottlieb.net/2014/03/02/opensource-event-display.html</link>
-        <guid isPermaLink="true">http://drewgottlieb.net/2014/03/02/opensource-event-display.html</guid>
-      </item>
+          <pubDate>Sun, 02 Mar 2014 00:00:00 -0500</pubDate>
+          <link>http://drewgottlieb.net/2014/03/02/opensource-event-display.html</link>
+          <guid isPermaLink="true">http://drewgottlieb.net/2014/03/02/opensource-event-display.html</guid>
+        </item>
+      
     
-      <item>
-        <title>Recreating my TV graphics program from the ground up with Qt</title>
-        <description>&lt;div class=&quot;image-left&quot;&gt;
+      
+        <item>
+          <title>Recreating my TV graphics program from the ground up with Qt</title>
+          <description>&lt;div class=&quot;image-left&quot;&gt;
   &lt;img src=&quot;/post-content/2014/02/27/recreating-tv-graphics-program/launch.png&quot; /&gt;
   &lt;em&gt;The launch screen of the new program.&lt;/em&gt;
 &lt;/div&gt;
@@ -245,14 +252,16 @@ beautiful programs I’ve written so far. When I graduate from my high school
 in a few months, I want to leave the TV studio with the best possible graphics
 program.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 27 Feb 2014 00:00:00 -0500</pubDate>
-        <link>http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</link>
-        <guid isPermaLink="true">http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</guid>
-      </item>
+          <pubDate>Thu, 27 Feb 2014 00:00:00 -0500</pubDate>
+          <link>http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</link>
+          <guid isPermaLink="true">http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</guid>
+        </item>
+      
     
-      <item>
-        <title>Winning a Trip to The Googleplex</title>
-        <description>&lt;div class=&quot;image-left&quot;&gt;
+      
+        <item>
+          <title>Winning a Trip to The Googleplex</title>
+          <description>&lt;div class=&quot;image-left&quot;&gt;
   &lt;img src=&quot;/post-content/2013/02/04/winning-trip-to-googleplex/gci.png&quot; /&gt;
 &lt;/div&gt;
 
@@ -317,14 +326,16 @@ nothing, but you know what I mean.&lt;/p&gt;
 finalist, which by itself is good enough for me. But then
 &lt;strong&gt;&lt;a href=&quot;http://google-opensource.blogspot.com/2013/02/google-code-in-2012-grand-prize-winners.html&quot;&gt;I won&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 04 Feb 2013 00:00:00 -0500</pubDate>
-        <link>http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</link>
-        <guid isPermaLink="true">http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</guid>
-      </item>
+          <pubDate>Mon, 04 Feb 2013 00:00:00 -0500</pubDate>
+          <link>http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</link>
+          <guid isPermaLink="true">http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</guid>
+        </item>
+      
     
-      <item>
-        <title>Real-time User Count Without Any Javascript</title>
-        <description>&lt;div class=&quot;image-left&quot;&gt;
+      
+        <item>
+          <title>Real-time User Count Without Any Javascript</title>
+          <description>&lt;div class=&quot;image-left&quot;&gt;
   &lt;img src=&quot;http://drewgottlieb.net:9192/online.png&quot; /&gt;
   &lt;em&gt;Live Demonstration&lt;/em&gt;
 &lt;/div&gt;
@@ -404,14 +415,16 @@ streams, as I suggested in my last paragraph. Upon clicking any link, the
 browser stops loading all resources, including streams. This is before it even
 knows that the result status will be 204. What a bummer.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 29 Jul 2012 00:00:00 -0400</pubDate>
-        <link>http://drewgottlieb.net/2012/07/29/real-time-user-count.html</link>
-        <guid isPermaLink="true">http://drewgottlieb.net/2012/07/29/real-time-user-count.html</guid>
-      </item>
+          <pubDate>Sun, 29 Jul 2012 00:00:00 -0400</pubDate>
+          <link>http://drewgottlieb.net/2012/07/29/real-time-user-count.html</link>
+          <guid isPermaLink="true">http://drewgottlieb.net/2012/07/29/real-time-user-count.html</guid>
+        </item>
+      
     
-      <item>
-        <title>Trying out Box2d</title>
-        <description>&lt;div class=&quot;image-right&quot;&gt;
+      
+        <item>
+          <title>Trying out Box2d</title>
+          <description>&lt;div class=&quot;image-right&quot;&gt;
   &lt;img width=&quot;300&quot; src=&quot;/post-content/2011/12/29/trying-out-box2d/box2d-dominoes.png&quot; /&gt;
   &lt;em&gt;Dominoes falling towards a house.&lt;/em&gt;
 &lt;/div&gt;
@@ -550,14 +563,16 @@ appropriately use them.&lt;/p&gt;
 &lt;p&gt;You can download a Windows binary
 &lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo/releases&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 29 Dec 2011 00:00:00 -0500</pubDate>
-        <link>http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</link>
-        <guid isPermaLink="true">http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</guid>
-      </item>
+          <pubDate>Thu, 29 Dec 2011 00:00:00 -0500</pubDate>
+          <link>http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</link>
+          <guid isPermaLink="true">http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</guid>
+        </item>
+      
     
-      <item>
-        <title>Storing Digital Data on an Audio Cassette</title>
-        <description>&lt;div class=&quot;image-left&quot; style=&quot;width: 250px;&quot;&gt;
+      
+        <item>
+          <title>Storing Digital Data on an Audio Cassette</title>
+          <description>&lt;div class=&quot;image-left&quot; style=&quot;width: 250px;&quot;&gt;
   &lt;img src=&quot;/post-content/2011/09/18/storing-data-on-audio-cassette/overview.jpg&quot; /&gt;
   &lt;em&gt;The cassette recorder hooked up to my computer&#39;s front audio ports.&lt;/em&gt;
 &lt;/div&gt;
@@ -636,10 +651,11 @@ rate up to 2000 bits/s, which results in a 660Kb capacity for a 90-minute tape.&
 if you happen to have a tape and a tape recorder, it’s pretty fun to do it
 anyway.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 18 Sep 2011 00:00:00 -0400</pubDate>
-        <link>http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</link>
-        <guid isPermaLink="true">http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</guid>
-      </item>
+          <pubDate>Sun, 18 Sep 2011 00:00:00 -0400</pubDate>
+          <link>http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</link>
+          <guid isPermaLink="true">http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</guid>
+        </item>
+      
     
   </channel>
 </rss>
