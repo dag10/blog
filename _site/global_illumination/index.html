@@ -63,10 +63,34 @@ I branched my toy OpenGL engine and created a scene. The source code for the
 scene is on my GitHub in
 <a href="https://github.com/dag10/DrewGraphics/blob/giclasslayout/src/scenes/LayoutScene.cpp">LayoutScene.cpp</a>.</p>
 
-<p>Here&#39;s the output:</p>
+<p>Here&#39;s the output from the camera&#39;s perspective:</p>
 
 <p><a href="/post-content/2018/01/21/gi-setting-the-scene/screenshot.png">
   <img src="/post-content/2018/01/21/gi-setting-the-scene/screenshot.png" />
+</a></p>
+
+<p>The coordinate system is right-handed, so the forward vector is <code>(0, 0, -1)</code>.</p>
+
+<p>The floor grid is a 12 x 28 unit grid.</p>
+
+<p>The camera is positioned at the position <code>(-3, 2, 5)</code>, with its forward vector
+being <code>(0, -0.164, 0)</code>. Its vertical field of view is 60 degrees.</p>
+
+<p>Both spheres are 2.5 units in diameter.</p>
+
+<p>The sphere closest to the camera, which will become the transparent sphere
+in the ray tracer, is at position <code>(-3, 2, 0)</code>.</p>
+
+<p>The sphere behind it, which will become the reflective sphere, is positioned
+at <code>(-1, 1.5, -2)</code>.</p>
+
+<p>The lighting in the scene is a directional light, pointing in the direction
+of <code>(0, -1, -0.3)</code> normalized.</p>
+
+<p>Here&#39;s a top-down orthographic projection:</p>
+
+<p><a href="/post-content/2018/01/21/gi-setting-the-scene/ortho.png">
+  <img src="/post-content/2018/01/21/gi-setting-the-scene/ortho.png" />
 </a></p>
 </p>
            <!--<p class="readmore"><a href="/giclass/2018/01/21/gi-setting-the-scene.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>-->
