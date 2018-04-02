@@ -8,7 +8,20 @@
     <title>Drew Gottlieb</title>
     <link>http://drewgottlieb.net</link>
     <description>Software Developer</description>
-    <pubDate>Thu, 15 Mar 2018 00:00:00 -0500</pubDate>
+    <pubDate>Mon, 02 Apr 2018 00:00:00 -0400</pubDate>
+    <item>
+      <title>Procedural Textures</title>
+      <link>http://drewgottlieb.net/giclass/2018/04/02/gi-procedural-textures.html</link>
+      <description>&lt;style type=&quot;text/css&quot;&gt;
+  .halfimg {
+    display: inline-block;
+    width: 50%;
+  }
+&lt;/style&gt;
+</description>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 -0400</pubDate>
+      <dc:date>2018-04-02T00:00:00-04:00</dc:date>
+    </item>
     <item>
       <title>Phong Shading and Shadows</title>
       <link>http://drewgottlieb.net/giclass/2018/03/15/gi-shadows.html</link>
@@ -19,8 +32,8 @@
   }
 &lt;/style&gt;
 </description>
-      <pubDate>Thu, 15 Mar 2018 00:00:00 -0500</pubDate>
-      <dc:date>2018-03-15T00:00:00-05:00</dc:date>
+      <pubDate>Thu, 15 Mar 2018 00:00:00 -0400</pubDate>
+      <dc:date>2018-03-15T00:00:00-04:00</dc:date>
     </item>
     <item>
       <title>Raytracing Framework</title>
@@ -32,8 +45,8 @@
   }
 &lt;/style&gt;
 </description>
-      <pubDate>Tue, 13 Feb 2018 00:00:00 -0600</pubDate>
-      <dc:date>2018-02-13T00:00:00-06:00</dc:date>
+      <pubDate>Tue, 13 Feb 2018 00:00:00 -0500</pubDate>
+      <dc:date>2018-02-13T00:00:00-05:00</dc:date>
     </item>
     <item>
       <title>Setting The Scene</title>
@@ -43,8 +56,8 @@ I branched my toy OpenGL engine and created a scene. The source code for the
 scene is on my GitHub in
 &lt;a href=&quot;https://github.com/dag10/DrewGraphics/blob/giclasslayout/src/scenes/LayoutScene.cpp&quot;&gt;LayoutScene.cpp&lt;/a&gt;.&lt;/p&gt;
 </description>
-      <pubDate>Sun, 21 Jan 2018 00:00:00 -0600</pubDate>
-      <dc:date>2018-01-21T00:00:00-06:00</dc:date>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 -0500</pubDate>
+      <dc:date>2018-01-21T00:00:00-05:00</dc:date>
     </item>
     <item>
       <title>Mixing Reality with Virtual Reality</title>
@@ -71,16 +84,16 @@ reality to share in a VR experience.&lt;/p&gt;
 HTC Vive, a VR system that includes two positionally-tracked controllers.
 Here’s what that looks like:&lt;/p&gt;
 </description>
-      <pubDate>Tue, 31 Jan 2017 00:00:00 -0600</pubDate>
-      <dc:date>2017-01-31T00:00:00-06:00</dc:date>
+      <pubDate>Tue, 31 Jan 2017 00:00:00 -0500</pubDate>
+      <dc:date>2017-01-31T00:00:00-05:00</dc:date>
     </item>
     <item>
       <title>An open-source device for displaying upcoming events</title>
       <link>http://drewgottlieb.net/2014/03/02/opensource-event-display.html</link>
       <description>&lt;p&gt;Web and desktop projects are fun, but hardware adds a whole new dimension to software projects. I wanted to work on something physical, and I found the perfect application: A device that shows upcoming events on my floor’s lounge. I live in the Computer Science House at RIT and we have several special rooms, such as the lounge. We also maintain a shared Google Calendar, which is what my device pulls events from.&lt;/p&gt;
 </description>
-      <pubDate>Sun, 02 Mar 2014 00:00:00 -0600</pubDate>
-      <dc:date>2014-03-02T00:00:00-06:00</dc:date>
+      <pubDate>Sun, 02 Mar 2014 00:00:00 -0500</pubDate>
+      <dc:date>2014-03-02T00:00:00-05:00</dc:date>
     </item>
     <item>
       <title>Recreating my TV graphics program from the ground up with Qt</title>
@@ -90,8 +103,8 @@ Here’s what that looks like:&lt;/p&gt;
   &lt;em&gt;The launch screen of the new program.&lt;/em&gt;
 &lt;/div&gt;
 </description>
-      <pubDate>Thu, 27 Feb 2014 00:00:00 -0600</pubDate>
-      <dc:date>2014-02-27T00:00:00-06:00</dc:date>
+      <pubDate>Thu, 27 Feb 2014 00:00:00 -0500</pubDate>
+      <dc:date>2014-02-27T00:00:00-05:00</dc:date>
     </item>
     <item>
       <title>Winning a Trip to The Googleplex</title>
@@ -100,8 +113,8 @@ Here’s what that looks like:&lt;/p&gt;
   &lt;img src=&quot;/gci.png&quot; /&gt;
 &lt;/div&gt;
 </description>
-      <pubDate>Mon, 04 Feb 2013 00:00:00 -0600</pubDate>
-      <dc:date>2013-02-04T00:00:00-06:00</dc:date>
+      <pubDate>Mon, 04 Feb 2013 00:00:00 -0500</pubDate>
+      <dc:date>2013-02-04T00:00:00-05:00</dc:date>
     </item>
     <item>
       <title>Real-time User Count Without Any Javascript</title>
@@ -111,8 +124,8 @@ Here’s what that looks like:&lt;/p&gt;
   &lt;em&gt;Live Demonstration&lt;/em&gt;
 &lt;/div&gt;
 </description>
-      <pubDate>Sun, 29 Jul 2012 00:00:00 -0500</pubDate>
-      <dc:date>2012-07-29T00:00:00-05:00</dc:date>
+      <pubDate>Sun, 29 Jul 2012 00:00:00 -0400</pubDate>
+      <dc:date>2012-07-29T00:00:00-04:00</dc:date>
     </item>
     <item>
       <title>Trying out Box2d</title>
@@ -122,8 +135,8 @@ Here’s what that looks like:&lt;/p&gt;
   &lt;em&gt;Dominoes falling towards a house.&lt;/em&gt;
 &lt;/div&gt;
 </description>
-      <pubDate>Thu, 29 Dec 2011 00:00:00 -0600</pubDate>
-      <dc:date>2011-12-29T00:00:00-06:00</dc:date>
+      <pubDate>Thu, 29 Dec 2011 00:00:00 -0500</pubDate>
+      <dc:date>2011-12-29T00:00:00-05:00</dc:date>
     </item>
     <item>
       <title>Storing Digital Data on an Audio Cassette</title>
@@ -133,9 +146,9 @@ Here’s what that looks like:&lt;/p&gt;
   &lt;em&gt;The cassette recorder hooked up to my computer's front audio ports.&lt;/em&gt;
 &lt;/div&gt;
 </description>
-      <pubDate>Sun, 18 Sep 2011 00:00:00 -0500</pubDate>
-      <dc:date>2011-09-18T00:00:00-05:00</dc:date>
+      <pubDate>Sun, 18 Sep 2011 00:00:00 -0400</pubDate>
+      <dc:date>2011-09-18T00:00:00-04:00</dc:date>
     </item>
-    <dc:date>2018-03-15T00:00:00-05:00</dc:date>
+    <dc:date>2018-04-02T00:00:00-04:00</dc:date>
   </channel>
 </rss>

@@ -47,6 +47,44 @@
     
       <article class="preview post">
          <header>
+           <h1 class="post-title"><a href="/2017/01/31/mixing-reality-with-vr.html">Mixing Reality with Virtual Reality</a></h1>
+           <div class="post-meta"><time datetime="31 January, 2017">31 January, 2017</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><p>Virtual reality is a pretty magical experience when it comes to making art.
+However, if you have friends in the room watching you, the magic is lost on
+them. They can only see the experience by looking at a distorted preview of the
+player’s perspective on a computer monitor.</p>
+
+<p>A friend was recently painting a 3D submarine in Tilt Brush. “Look at this
+periscope!” she said. I told her to look closer at it, and I leaned into my
+computer monitor to get a glimpse of what she made.</p>
+
+<p>We can do better than this. Why do I have to get up off the couch to see what
+my friend is creating? Why can’t I just lean back and see the art floating in
+the middle of the room?</p>
+
+<p>Until recently, such magic would have been impossible. That is, until Microsoft
+released development kits of their new mixed-reality HoloLens glasses. I’m
+fortunate to have access a couple units, and I really wanted to use mixed
+reality to share in a VR experience.</p>
+
+<p>So I spent a week making a proof of concept to feel that out. It runs on the
+HTC Vive, a VR system that includes two positionally-tracked controllers.
+Here’s what that looks like:</p>
+
+<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/XPYb2IsZL68" frameborder="0" allowfullscreen>
+</iframe>
+
+&hellip;</p>
+             <p class="readmore"><a href="/2017/01/31/mixing-reality-with-vr.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
+         </section>
+      </article>
+    
+  
+    
+      <article class="preview post">
+         <header>
            <h1 class="post-title"><a href="/2014/03/02/opensource-event-display.html">An open-source device for displaying upcoming events</a></h1>
            <div class="post-meta"><time datetime="02 March, 2014">02 March, 2014</time></div>
          </header>
@@ -162,59 +200,6 @@ Content-Length: [length]
 
 &hellip;</p>
              <p class="readmore"><a href="/2012/07/29/real-time-user-count.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
-         </section>
-      </article>
-    
-  
-    
-      <article class="preview post">
-         <header>
-           <h1 class="post-title"><a href="/2011/12/29/trying-out-box2d.html">Trying out Box2d</a></h1>
-           <div class="post-meta"><time datetime="29 December, 2011">29 December, 2011</time></div>
-         </header>
-         <section class="post-excerpt post-content">
-           <p><div class="image-right">
-  <img width="300" src="/post-content/2011/12/29/trying-out-box2d/box2d-dominoes.png" />
-  <em>Dominoes falling towards a house.</em>
-</div>
-
-<p>What is Box2D? It’s a
-<a href="http://box2d.org/about">free and open source 2D physics engine</a>. It is
-developed with C++, and has fortunately been ported to many other languages,
-including Actionscript and Java. I was eager to try it out.</p>
-
-<p>At the same time, I was eager to get more familiar with the new
-<a href="http://en.wikipedia.org/wiki/C++11">C++11</a> standard I’ve been hearing about
-(a.k.a. C++0x). So I made a small program to get a taste of Box2D and C++11
-features. You can view and download the program
-<a href="https://github.com/dag10/sfml-box2d-demo/releases/tag/v1.0">here</a>.</p>
-
-<p>To use it, drag out a rectangle with your mouse. When you release the mouse,
-the rectangle becomes a object in the world. It is affected by gravity, and
-interacts realistically with other objects. If you happen to own a touch
-screen, you can press space to hide the mouse cursor. You’re welcome.</p>
-
-<p>Mixing Box2D with SFML graphics was a quite tricky. To keep track of the
-objects, I created an std::vector of this struct:</p>
-
-<div class="code-leadin">
-  <a href="https://github.com/dag10/sfml-box2d-demo/blob/f3238b80/include/Environment.h#L19">
-    Environment.h:19
-  </a> (rev f3238b80)
-</div>
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="n">shared_ptr</span> <span class="n">graphic</span><span class="p">;</span>
-    <span class="n">shared_ptr</span> <span class="n">body</span><span class="p">;</span>
-<span class="p">}</span> <span class="n">PhysicsObject</span><span class="p">;</span>
-</code></pre></div>
-<p>There was a problem though: The Box2D world’s coordinates are 1 unit = 1
-meter, and the Y-axis increases upwards. SFML coordinates, however, are more
-conventional computer graphics coordinates: 1 unit = 1 pixel, and the Y-axis
-increased downwards. To add to these troubles, the SFML view (sf::view) has to
-be able to scale (zoom) and move around the world.</p>
-
-&hellip;</p>
-             <p class="readmore"><a href="/2011/12/29/trying-out-box2d.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
          </section>
       </article>
     

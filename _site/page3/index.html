@@ -47,6 +47,59 @@
     
       <article class="preview post">
          <header>
+           <h1 class="post-title"><a href="/2011/12/29/trying-out-box2d.html">Trying out Box2d</a></h1>
+           <div class="post-meta"><time datetime="29 December, 2011">29 December, 2011</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><div class="image-right">
+  <img width="300" src="/post-content/2011/12/29/trying-out-box2d/box2d-dominoes.png" />
+  <em>Dominoes falling towards a house.</em>
+</div>
+
+<p>What is Box2D? It’s a
+<a href="http://box2d.org/about">free and open source 2D physics engine</a>. It is
+developed with C++, and has fortunately been ported to many other languages,
+including Actionscript and Java. I was eager to try it out.</p>
+
+<p>At the same time, I was eager to get more familiar with the new
+<a href="http://en.wikipedia.org/wiki/C++11">C++11</a> standard I’ve been hearing about
+(a.k.a. C++0x). So I made a small program to get a taste of Box2D and C++11
+features. You can view and download the program
+<a href="https://github.com/dag10/sfml-box2d-demo/releases/tag/v1.0">here</a>.</p>
+
+<p>To use it, drag out a rectangle with your mouse. When you release the mouse,
+the rectangle becomes a object in the world. It is affected by gravity, and
+interacts realistically with other objects. If you happen to own a touch
+screen, you can press space to hide the mouse cursor. You’re welcome.</p>
+
+<p>Mixing Box2D with SFML graphics was a quite tricky. To keep track of the
+objects, I created an std::vector of this struct:</p>
+
+<div class="code-leadin">
+  <a href="https://github.com/dag10/sfml-box2d-demo/blob/f3238b80/include/Environment.h#L19">
+    Environment.h:19
+  </a> (rev f3238b80)
+</div>
+<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">shared_ptr</span> <span class="n">graphic</span><span class="p">;</span>
+    <span class="n">shared_ptr</span> <span class="n">body</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">PhysicsObject</span><span class="p">;</span>
+</code></pre></div>
+<p>There was a problem though: The Box2D world’s coordinates are 1 unit = 1
+meter, and the Y-axis increases upwards. SFML coordinates, however, are more
+conventional computer graphics coordinates: 1 unit = 1 pixel, and the Y-axis
+increased downwards. To add to these troubles, the SFML view (sf::view) has to
+be able to scale (zoom) and move around the world.</p>
+
+&hellip;</p>
+             <p class="readmore"><a href="/2011/12/29/trying-out-box2d.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
+         </section>
+      </article>
+    
+  
+    
+      <article class="preview post">
+         <header>
            <h1 class="post-title"><a href="/2011/09/18/storing-data-on-audio-cassette.html">Storing Digital Data on an Audio Cassette</a></h1>
            <div class="post-meta"><time datetime="18 September, 2011">18 September, 2011</time></div>
          </header>

@@ -13,6 +13,8 @@
       
     
       
+    
+      
         <item>
           <title>Mixing Reality with Virtual Reality</title>
           <description>&lt;p&gt;Virtual reality is a pretty magical experience when it comes to making art.
@@ -108,7 +110,7 @@ yourself! Get the source code from GitHub:
 &lt;a href=&quot;https://tiltbrush.com&quot;&gt;Tilt Brush&lt;/a&gt;. This project was my own work from before
 the internship and has no association with Google.&lt;/em&gt;&lt;/p&gt;
 </description>
-          <pubDate>Tue, 31 Jan 2017 00:00:00 -0600</pubDate>
+          <pubDate>Tue, 31 Jan 2017 00:00:00 -0500</pubDate>
           <link>http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</link>
           <guid isPermaLink="true">http://drewgottlieb.net/2017/01/31/mixing-reality-with-vr.html</guid>
         </item>
@@ -188,7 +190,7 @@ project’s readme on GitHub: More details and instructions on how to build your
 own can be found in the project’s readme on GitHub:
 &lt;a href=&quot;https://github.com/dag10/EventLCD&quot;&gt;https://github.com/dag10/EventLCD&lt;/a&gt;&lt;/p&gt;
 </description>
-          <pubDate>Sun, 02 Mar 2014 00:00:00 -0600</pubDate>
+          <pubDate>Sun, 02 Mar 2014 00:00:00 -0500</pubDate>
           <link>http://drewgottlieb.net/2014/03/02/opensource-event-display.html</link>
           <guid isPermaLink="true">http://drewgottlieb.net/2014/03/02/opensource-event-display.html</guid>
         </item>
@@ -256,7 +258,7 @@ beautiful programs I’ve written so far. When I graduate from my high school
 in a few months, I want to leave the TV studio with the best possible graphics
 program.&lt;/p&gt;
 </description>
-          <pubDate>Thu, 27 Feb 2014 00:00:00 -0600</pubDate>
+          <pubDate>Thu, 27 Feb 2014 00:00:00 -0500</pubDate>
           <link>http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</link>
           <guid isPermaLink="true">http://drewgottlieb.net/2014/02/27/recreating-tv-graphics-program.html</guid>
         </item>
@@ -330,7 +332,7 @@ nothing, but you know what I mean.&lt;/p&gt;
 finalist, which by itself is good enough for me. But then
 &lt;strong&gt;&lt;a href=&quot;http://google-opensource.blogspot.com/2013/02/google-code-in-2012-grand-prize-winners.html&quot;&gt;I won&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 </description>
-          <pubDate>Mon, 04 Feb 2013 00:00:00 -0600</pubDate>
+          <pubDate>Mon, 04 Feb 2013 00:00:00 -0500</pubDate>
           <link>http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</link>
           <guid isPermaLink="true">http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</guid>
         </item>
@@ -419,7 +421,7 @@ streams, as I suggested in my last paragraph. Upon clicking any link, the
 browser stops loading all resources, including streams. This is before it even
 knows that the result status will be 204. What a bummer.&lt;/p&gt;
 </description>
-          <pubDate>Sun, 29 Jul 2012 00:00:00 -0500</pubDate>
+          <pubDate>Sun, 29 Jul 2012 00:00:00 -0400</pubDate>
           <link>http://drewgottlieb.net/2012/07/29/real-time-user-count.html</link>
           <guid isPermaLink="true">http://drewgottlieb.net/2012/07/29/real-time-user-count.html</guid>
         </item>
@@ -567,97 +569,9 @@ appropriately use them.&lt;/p&gt;
 &lt;p&gt;You can download a Windows binary
 &lt;a href=&quot;https://github.com/dag10/sfml-box2d-demo/releases&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
-          <pubDate>Thu, 29 Dec 2011 00:00:00 -0600</pubDate>
+          <pubDate>Thu, 29 Dec 2011 00:00:00 -0500</pubDate>
           <link>http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</link>
           <guid isPermaLink="true">http://drewgottlieb.net/2011/12/29/trying-out-box2d.html</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Storing Digital Data on an Audio Cassette</title>
-          <description>&lt;div class=&quot;image-left&quot; style=&quot;width: 250px;&quot;&gt;
-  &lt;img src=&quot;/post-content/2011/09/18/storing-data-on-audio-cassette/overview.jpg&quot; /&gt;
-  &lt;em&gt;The cassette recorder hooked up to my computer&#39;s front audio ports.&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;p&gt;A few days ago my dad bought a simple audio cassette player/recorder to make a
-digital copy of an old tape recording he had of Pioneer 10 leaving the solar
-system. I had the opportunity to try something I always wanted to try: Storing
-data on an audio cassette. After some researching, I decided to use
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Radioteletype&quot;&gt;RTTY&lt;/a&gt; (Radioteletype). I found an
-awesome program called Digital Master 780, which is part of a freeware Ham
-Radio software package,
-&lt;a href=&quot;https://web.archive.org/web/20120720063807/http://wiki.ham-radio-deluxe.com/index.php?title=Main_Page&quot;&gt;Ham Radio Deluxe&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To connect the tape player, I needed to use two 3.5mm
-&lt;a href=&quot;http://en.wikipedia.org/wiki/TRS_connector&quot;&gt;TRS&lt;/a&gt; cables, one for my computer
-to hear the cassette player’s output, and another one to send audio to the
-player’s audio input for recording.&lt;/p&gt;
-
-&lt;div class=&quot;image-right&quot; style=&quot;width: 200px;&quot;&gt;
-  &lt;img src=&quot;/post-content/2011/09/18/storing-data-on-audio-cassette/splice.jpg&quot; /&gt;
-  &lt;em&gt;My DIY 3.5mm TRS cable from two earphone cables.&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Since I only own one cable, I made a second one by using two old earphone
-wires, wire strippers, two alligator clips, and tape. It looks messy, but it
-&lt;a href=&quot;/post-content/2011/09/18/storing-data-on-audio-cassette/splice_closeup.jpg&quot;&gt;gets the job done&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;For reading and writing digital data to the tape, I tried out several audio
-formats that the program could use. Due to the low audio quality that the tape
-can store, I was only able to get away with using RTTY. After further
-experimentation, I decided that these are the best settings I can use:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;    100 Baud, 170 Hz shift, 7 bits (ASCII), 2 stop bits.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Success! Here’s a video of me writing two paragraphs of “Lorem ispum” text to
-the tape:&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube-nocookie.com/embed/BMVO4X5u-gE?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;
-&lt;/iframe&gt;
-
-&lt;p&gt;And here&amp;#39;s a video of me reading the data back:&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube-nocookie.com/embed/EfcOOFiPw4w?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;
-&lt;/iframe&gt;
-
-&lt;p&gt;And here’s the &lt;a href=&quot;/post-content/2011/09/18/storing-data-on-audio-cassette/sample.ogg&quot;&gt;audio&lt;/a&gt; if want to know what it
-sounds like, or even decode it yourself: &lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;120&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/23632022&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_artwork=true&quot;&gt;
-&lt;/iframe&gt;
-
-&lt;p&gt;Although slow, I just &lt;em&gt;had&lt;/em&gt; to try storing a file on it. I took a low-quality
-70-70 pixel .gif image and used this
-&lt;a href=&quot;http://www.motobit.com/util/base64-decoder-encoder.asp&quot;&gt;online tool&lt;/a&gt; to
-convert it into copyable Base64-encoded text. It took about ten minutes for it
-to write the data to the cassette, and it used up half of the tape! After a
-ten-minute reading of the tape, I was able to use the same website to convert
-the Base64-encoded file back into its original form. It worked!&lt;/p&gt;
-
-&lt;p&gt;So what can I conclude about storing data on an audio cassette? It’s possible,
-but it’s extremely slow and space-consuming. If anything, it’s only good for
-storing text, as even the smallest files will consume half of your tape if
-you’re using Base64-encoding and RTTY-100.&lt;/p&gt;
-
-&lt;p&gt;What I did is not new, by the way. Some of the first desktops and early
-microcomputers
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Compact_Cassette#Data_recording&quot;&gt;used cassettes for data storage&lt;/a&gt;.
-The difference, however, is that they did not use RTTY (which was designed for
-over-the-air text communications), and instead used
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Frequency-shift_keying&quot;&gt;FSK&lt;/a&gt;
-(Frequency-shift Keying). As noted on Wikipedia, they could transfer data as a
-rate up to 2000 bits/s, which results in a 660Kb capacity for a 90-minute tape.&lt;/p&gt;
-
-&lt;p&gt;n 2011, storing data on audio cassettes is pointless and impractical. However,
-if you happen to have a tape and a tape recorder, it’s pretty fun to do it
-anyway.&lt;/p&gt;
-</description>
-          <pubDate>Sun, 18 Sep 2011 00:00:00 -0500</pubDate>
-          <link>http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</link>
-          <guid isPermaLink="true">http://drewgottlieb.net/2011/09/18/storing-data-on-audio-cassette.html</guid>
         </item>
       
     
