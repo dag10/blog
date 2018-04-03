@@ -8,7 +8,20 @@
     <title>Drew Gottlieb</title>
     <link>http://drewgottlieb.net</link>
     <description>Software Developer</description>
-    <pubDate>Mon, 02 Apr 2018 00:00:00 -0400</pubDate>
+    <pubDate>Tue, 03 Apr 2018 00:00:00 -0400</pubDate>
+    <item>
+      <title>Reflections</title>
+      <link>http://drewgottlieb.net/giclass/2018/04/03/gi-reflections.html</link>
+      <description>&lt;style type=&quot;text/css&quot;&gt;
+  .halfimg {
+    display: inline-block;
+    width: 50%;
+  }
+&lt;/style&gt;
+</description>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 -0400</pubDate>
+      <dc:date>2018-04-03T00:00:00-04:00</dc:date>
+    </item>
     <item>
       <title>Procedural Textures</title>
       <link>http://drewgottlieb.net/giclass/2018/04/02/gi-procedural-textures.html</link>
@@ -149,6 +162,6 @@ Here’s what that looks like:&lt;/p&gt;
       <pubDate>Sun, 18 Sep 2011 00:00:00 -0400</pubDate>
       <dc:date>2011-09-18T00:00:00-04:00</dc:date>
     </item>
-    <dc:date>2018-04-02T00:00:00-04:00</dc:date>
+    <dc:date>2018-04-03T00:00:00-04:00</dc:date>
   </channel>
 </rss>

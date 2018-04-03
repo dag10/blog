@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    
+      <title>Drew Gottlieb - Reflections</title>
+    
+
+    
+      <meta name="description" content="
+" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+
+</head>
+<body class="home-template">
+
+    <header id="site-head">
+    
+       <a id="blog-logo" href="http://drewgottlieb.net">
+        <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" alt="Blog Logo" />
+       </a>
+    
+    <h1 class="blog-title"><a href="http://drewgottlieb.net">Drew Gottlieb</a></h1>
+    <h2 class="blog-description">Software Developer
+    | <a href='/about'> About me </a>
+    | <a href='https://github.com/dag10'> Projects </a>
+    | <a href='/resume.pdf'> Resume </a>
+    </h2>
+</header>
+
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header>
+        
+           <div class="post-meta tags">
+	     Posted in 
+	   </div>
+	
+        <h1 class="post-title">Reflections</h1>
+        <div class="post-meta">
+	   <time datetime="2018-04-03">03 Apr 2018</time>
+	</div>
+        </header>
+
+        <section class="post-content">
+            <style type="text/css">
+  .halfimg {
+    display: inline-block;
+    width: 50%;
+  }
+</style>
+
+<p>The fifth assignment is adding reflections using recursive ray tracing. I added
+a <em>reflectance</em> property to each material, which ranges from 0.0 to 1.0. The
+local illumination (phong) is mixed with the results of ray tracing the
+reflected ray based on this value.</p>
+
+<p>Here&#39;s a screenshot of the scene with the near sphere being 10% reflective and
+the back sphere being 100% reflective.</p>
+
+<p><a href="/post-content/2018/04/03/reflections/reflections.png">
+  <img src="/post-content/2018/04/03/reflections/reflections.png" />
+</a></p>
+
+<p>And here&#39;s two additional images that are fun to look at. The first is a
+close-up of the red and green spheres, each being 70% reflective.</p>
+
+<p>The second image shows my raytraced reflections not quite working. But it
+looks pretty damn cool, right? Click it for the full-res screenshot, it&#39;s worth
+it.</p>
+
+<p><a class="halfimg" href="/post-content/2018/04/03/reflections/both_reflective.png">
+  <img src="/post-content/2018/04/03/reflections/both_reflective.png" />
+</a><a class="halfimg" href="/post-content/2018/04/03/reflections/oh_my.png">
+  <img src="/post-content/2018/04/03/reflections/oh_my.png" />
+</a></p>
+
+        </section>
+
+        <section class="share">
+            <p class="info">Share this post</p>
+            <a class="icon-twitter"
+            href="http://twitter.com/share?text=Reflections&url=http://drewgottlieb.net/giclass/2018/04/03/gi-reflections.html"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <span class="hidden">Twitter</span>
+            </a>
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://drewgottlieb.net/giclass/2018/04/03/gi-reflections.html"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <span class="hidden">Facebook</span>
+            </a>
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=http://drewgottlieb.net/giclass/2018/04/03/gi-reflections.html"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <span class="hidden">Google+</span>
+            </a>
+        </section>
+
+        <footer class="post-footer">
+	    
+            <section class="author">
+                <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" class="userimage" alt="Drew Gottlieb" />
+                <p class="attr">Author</p>
+                <h4><a href="http://drewgottlieb.net">Drew Gottlieb</a></h4>
+                <p class="bio">I'm a software developer studying at the Rochester Institute of Technology. On a mission to empower creativity with computing that feels human.</p>
+            </section>
+	    
+
+
+            
+	      <section class="disqus">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+ 	    var disqus_shortname = 'minipenguin'; 
+      var disqus_identifier = '/giclass/2018/04/03/gi-reflections';
+   	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            
+        </footer>
+		
+    </article>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="inner">
+             <section class="copyright">&copy; 2018 <a href="/">Drew Gottlieb</a>. All rights reserved.</section>
+             <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19567403-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
