@@ -17,6 +17,9 @@
     display: inline-block;
     width: 50%;
   }
+  .right {
+    float: right;
+  }
 &lt;/style&gt;
 </description>
       <pubDate>Tue, 03 Apr 2018 00:00:00 -0400</pubDate>

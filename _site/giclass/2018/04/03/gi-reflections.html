@@ -64,19 +64,41 @@
     display: inline-block;
     width: 50%;
   }
+  .right {
+    float: right;
+  }
 </style>
 
 <p>The fifth assignment is adding reflections using recursive ray tracing. I added
 a <em>reflectance</em> property to each material, which ranges from 0.0 to 1.0. The
-local illumination (phong) is mixed with the results of ray tracing the
+local illumination (phong) is blended with the results of ray tracing the
 reflected ray based on this value.</p>
 
-<p>Here&#39;s a screenshot of the scene with the near sphere being 10% reflective and
-the back sphere being 100% reflective.</p>
+<p>Here&#39;s a screenshot of the scene with the far sphere being 100% reflective,
+the floor being 10% reflective, and the background being changed to blue.</p>
 
-<p><a href="/post-content/2018/04/03/reflections/reflections.png">
-  <img src="/post-content/2018/04/03/reflections/reflections.png" />
+<p><a href="/post-content/2018/04/03/reflections/reflections_additive.png">
+  <img src="/post-content/2018/04/03/reflections/reflections_additive.png" />
 </a></p>
+
+<p>I made the materials able to be reflective in two different modes of blending:
+weighted, and additive. With weighted blending, the final color of the material
+surface is</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">((1 - reflectance) * localShadedColor) +
+(reflectance * reflectionShadedColor)
+</code></pre></div>
+<p>whereas with additive reflection blending, the final color is</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">localShadedColor + (reflectance * reflectionShadedColor);
+</code></pre></div>
+<p><a class="halfimg right" href="/post-content/2018/04/03/reflections/reflections_additive_preview.png">
+  <img src="/post-content/2018/04/03/reflections/reflections_additive_preview.png" />
+</a></p>
+
+<p>To make the far sphere look more like a shiny metal sphere, it&#39;s not just 100%
+reflective, it&#39;s additively reflective. Its reflection is blended additively
+with a phong shading that has a 100% white specular color and a 10% white
+diffuse color. As a result, the image to the right is what the OpenGL preview
+looks like.</p>
 
 <p>And here&#39;s two additional images that are fun to look at. The first is a
 close-up of the red and green spheres, each being 70% reflective.</p>
