@@ -66,6 +66,9 @@
   .right {
     float: right;
   }
+  .padded {
+    margin-left: 15px;
+  }
 </style>
 
 <p>Similarly to the previous assignment, the sixth assignment introduces rendering
@@ -86,7 +89,29 @@ pixels being the ray&#39;s final direction vector coded as color:</p>
   <img src="/post-content/2018/04/17/transmission/refraction_normals.png" />
 </a></p>
 
-<p><a class="halfimg right" href="/post-content/2018/04/17/transmission/oops.png">
+<p>I can also create lenses by scaling the sphere non-uniformly. Here&#39;s a preview
+and render screenshot of a lens that&#39;s a sphere 2.5 x 2.5 x 0.5 units, with
+a green sphere behind it as a subject:</p>
+
+<p><a class="halfimg left" href="/post-content/2018/04/17/transmission/lens_preview.png">
+  <img src="/post-content/2018/04/17/transmission/lens_preview.png" />
+</a>
+<a class="halfimg right" href="/post-content/2018/04/17/transmission/lens.png">
+  <img src="/post-content/2018/04/17/transmission/lens.png" />
+</a></p>
+
+<p>Here are two renders with the camera more on axis, showing the green subject.
+The right picture is the camera moved closer to the lens. Click on the pictures
+for the full resolution.</p>
+
+<p><a class="halfimg left" href="/post-content/2018/04/17/transmission/lens_on_axis.png">
+  <img src="/post-content/2018/04/17/transmission/lens_on_axis.png" />
+</a>
+<a class="halfimg right" href="/post-content/2018/04/17/transmission/lens_closer.png">
+  <img src="/post-content/2018/04/17/transmission/lens_closer.png" />
+</a></p>
+
+<p><a class="halfimg right padded" href="/post-content/2018/04/17/transmission/oops.png">
   <img src="/post-content/2018/04/17/transmission/oops.png" />
 </a></p>
 
