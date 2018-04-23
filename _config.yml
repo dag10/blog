@@ -2,6 +2,7 @@ name: Drew Gottlieb
 description: Software Developer
 meta_description: "My projects, experiments, successes, and failures."
 baseurl: ''
+plugins: [jekyll-paginate]
 
 include: ['.htaccess']
 

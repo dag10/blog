@@ -53,6 +53,53 @@
   
       <article class="preview post">
          <header>
+           <!--<h1 class="post-title"><a href="/giclass/2018/04/17/gi-transmission.html">Transmission</a></h1>-->
+           <h1 class="post-title">Transmission</h1>
+           <div class="post-meta"><time datetime="17 April, 2018">17 April, 2018</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><style type="text/css">
+  .halfimg {
+    display: inline-block;
+    width: 50%;
+  }
+  .right {
+    float: right;
+  }
+</style>
+
+<p>Similarly to the previous assignment, the sixth assignment introduces rendering
+of transmissive surfaces, taking refraction into account. Continuing with the
+theme of recreating J. Turner Whitted&#39;s test scene with a reflective and
+transmissive sphere, I&#39;ve made the front sphere of my scene be transmissive.</p>
+
+<p>Here&#39;s the render, using the blue sky background:</p>
+
+<p><a href="/post-content/2018/04/17/transmission/refraction.png">
+  <img src="/post-content/2018/04/17/transmission/refraction.png" />
+</a></p>
+
+<p>And to better illustrate the refraction, here&#39;s a render with the background
+pixels being the ray&#39;s final direction vector coded as color:</p>
+
+<p><a href="/post-content/2018/04/17/transmission/refraction_normals.png">
+  <img src="/post-content/2018/04/17/transmission/refraction_normals.png" />
+</a></p>
+
+<p><a class="halfimg right" href="/post-content/2018/04/17/transmission/oops.png">
+  <img src="/post-content/2018/04/17/transmission/oops.png" />
+</a></p>
+
+<p>And just like last time, here&#39;s a fun blooper render, where the ray was entering
+the sphere but never leaving, just bouncing off its inner surfaces until it
+hit the maximum number of bounces.</p>
+</p>
+           <!--<p class="readmore"><a href="/giclass/2018/04/17/gi-transmission.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>-->
+         </section>
+      </article>
+  
+      <article class="preview post">
+         <header>
            <!--<h1 class="post-title"><a href="/giclass/2018/04/03/gi-reflections.html">Reflections</a></h1>-->
            <h1 class="post-title">Reflections</h1>
            <div class="post-meta"><time datetime="03 April, 2018">03 April, 2018</time></div>

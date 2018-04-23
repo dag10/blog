@@ -17,6 +17,8 @@
       
     
       
+    
+      
         <item>
           <title>Mixing Reality with Virtual Reality</title>
           <description>&lt;p&gt;Virtual reality is a pretty magical experience when it comes to making art.
@@ -337,95 +339,6 @@ finalist, which by itself is good enough for me. But then
           <pubDate>Mon, 04 Feb 2013 00:00:00 -0500</pubDate>
           <link>http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</link>
           <guid isPermaLink="true">http://drewgottlieb.net/2013/02/04/winning-trip-to-googleplex.html</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Real-time User Count Without Any Javascript</title>
-          <description>&lt;div class=&quot;image-left&quot;&gt;
-  &lt;img src=&quot;http://drewgottlieb.net:9192/online.png&quot; /&gt;
-  &lt;em&gt;Live Demonstration&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;p&gt;IP cameras are frequently streamed as
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Motion_JPEG#M-JPEG_over_HTTP&quot;&gt;M-JPEG&lt;/a&gt; over HTTP
-connections. Why not use the same principle for other uses, too? Although
-M-JPEG streaming doesn’t work in Internet Explorer, it can still be useful.&lt;/p&gt;
-
-&lt;p&gt;The underlying protocol is simply a multipart HTTP request using the
-&lt;a href=&quot;http://en.wikipedia.org/wiki/MIME#Mixed-Replace&quot;&gt;x-mixed-replace&lt;/a&gt;
-content type. Basically, the server sends the document (or in this case, image)
-multiple times, with each part replacing the previous part. So when an IP
-camera is streaming, it’s just sending multiple jpeg images that each replace
-the previous image.&lt;/p&gt;
-
-&lt;p&gt;It looks like this:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 200 Ok
-Content-Type: multipart/x-mixed-replace; boundary=--icecream
-
---icecream
-Content-Type: image/jpeg
-Content-Length: [length]
-
-[data]
-
---icecream
-Content-Type: image/jpeg
-Content-Length: [length]
-
-[data]
-
---icecream
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;(and so on)&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;In this bare-bones example, the boundary is &lt;em&gt;icecream&lt;/em&gt;, but ideally you’d want
-to use something that won’t appear in the data itself. Also, the content-type
-can be anything, such as image/png.&lt;/p&gt;
-
-&lt;p&gt;While learning about this, a practical application immediately came to mind: a
-real time online-users counter — such as the one above. This method is great
-for this use because it fills two roles. First, it keeps a persistent
-connection between the client and server, so we know when a user connects and
-when that user disconnects. Second, it can display the user count in real-time
-without requiring any page updates. This system can be used in places where
-Javascript is not an option, such as on a forum.&lt;/p&gt;
-
-&lt;p&gt;I made it using &lt;a href=&quot;http://nodejs.org&quot;&gt;Node.js&lt;/a&gt;, with
-&lt;a href=&quot;http://backbonejs.org&quot;&gt;Backbone.js&lt;/a&gt;, and
-&lt;a href=&quot;https://github.com/learnboost/node-canvas/&quot;&gt;node-canvas&lt;/a&gt; — which unfortunately
-does not work on Windows. If you’re familiar with Backbone, the code should be
-rather self-explanatory.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://gist.github.com/dag10/48e6d25415ca92318815&quot;&gt;Here is the source&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I can see some neat uses for this type of image, since content can be made
-interactive without the use of client-side scripts. Interactivity can be
-introduced by having links with the server returning &lt;em&gt;HTTP 204&lt;/em&gt; No Content,
-such as &lt;a href=&quot;http://httpstat.us/204&quot;&gt;this link&lt;/a&gt; (provided by
-&lt;a href=&quot;http://httpstat.us&quot;&gt;httpstat.us&lt;/a&gt;). The client won’t go to a new page, but the
-server will be aware of the client’s request and can perform an action. With
-this, real-time tic-tac-toe or even hang-man is possible.&lt;/p&gt;
-
-&lt;p&gt;Just some thoughts.&lt;/p&gt;
-
-&lt;p&gt;You can follow discussion of this post on
-&lt;a href=&quot;https://news.ycombinator.com/item?id=4307126&quot;&gt;Hacker News&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;strong&gt;(03:28 EST) Update:&lt;/strong&gt; Through experimentation, I just discovered that
-unfortunately, it is not possible to combine HTTP 204 links with image
-streams, as I suggested in my last paragraph. Upon clicking any link, the
-browser stops loading all resources, including streams. This is before it even
-knows that the result status will be 204. What a bummer.&lt;/p&gt;
-</description>
-          <pubDate>Sun, 29 Jul 2012 00:00:00 -0400</pubDate>
-          <link>http://drewgottlieb.net/2012/07/29/real-time-user-count.html</link>
-          <guid isPermaLink="true">http://drewgottlieb.net/2012/07/29/real-time-user-count.html</guid>
         </item>
       
     
