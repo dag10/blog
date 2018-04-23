@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    
+      <title>Drew Gottlieb - Global Illumination Class</title>
+    
+
+    
+      <meta name="description" content="My projects, experiments, successes, and failures." />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+
+</head>
+<body class="home-template">
+
+    <main class="content" role="main">
+    <article class="post">
+        <header class="post-header">
+            <a id="blog-logo" href="http://drewgottlieb.net">
+                
+                    <img src="http://www.gravatar.com/avatar/bdf8f49aa6db2d48e5a5ead52af9009e?s=600" alt="Drew Gottlieb" />
+                 
+            </a>
+        </header>
+
+        <h1 class="post-title">Global Illumination Class</h1>
+
+        <section class="post-content">
+            <header id="site-head">
+    <h2 class="blog-description">DREW GOTTLIEB
+    | <a href='/'> Home </a>
+    | <a href='/about'> About me </a>
+    | <a href='https://github.com/dag10'> Projects </a>
+    | <a href='/resume.pdf'> Resume </a>
+    </h2>
+</header>
+
+<main class="content" role="main">
+
+  
+      <article class="preview post">
+         <header>
+           <!--<h1 class="post-title"><a href="/giclass/2018/04/17/gi-transmission.html">Transmission</a></h1>-->
+           <h1 class="post-title">Transmission</h1>
+           <div class="post-meta"><time datetime="17 April, 2018">17 April, 2018</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><style type="text/css">
+  .halfimg {
+    display: inline-block;
+    width: 50%;
+  }
+  .right {
+    float: right;
+  }
+</style>
+
+<p>Similarly to the previous assignment, the sixth assignment introduces rendering
+of transmissive surfaces, taking refraction into account. Continuing with the
+theme of recreating J. Turner Whitted&#39;s test scene with a reflective and
+transmissive sphere, I&#39;ve made the front sphere of my scene be transmissive.</p>
+
+<p>Here&#39;s the render, using the blue sky background:</p>
+
+<p><a href="/post-content/2018/04/17/transmission/refraction.png">
+  <img src="/post-content/2018/04/17/transmission/refraction.png" />
+</a></p>
+
+<p>And to better illustrate the refraction, here&#39;s a render with the background
+pixels being the ray&#39;s final direction vector coded as color:</p>
+
+<p><a href="/post-content/2018/04/17/transmission/refraction_normals.png">
+  <img src="/post-content/2018/04/17/transmission/refraction_normals.png" />
+</a></p>
+
+<p><a class="halfimg right" href="/post-content/2018/04/17/transmission/oops.png">
+  <img src="/post-content/2018/04/17/transmission/oops.png" />
+</a></p>
+
+<p>And just like last time, here&#39;s a fun blooper render, where the ray was entering
+the sphere but never leaving, just bouncing off its inner surfaces until it
+hit the maximum number of bounces.</p>
+</p>
+           <!--<p class="readmore"><a href="/giclass/2018/04/17/gi-transmission.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>-->
+         </section>
+      </article>
+  
+      <article class="preview post">
+         <header>
+           <!--<h1 class="post-title"><a href="/giclass/2018/04/03/gi-reflections.html">Reflections</a></h1>-->
+           <h1 class="post-title">Reflections</h1>
+           <div class="post-meta"><time datetime="03 April, 2018">03 April, 2018</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><style type="text/css">
+  .halfimg {
+    display: inline-block;
+    width: 50%;
+  }
+  .right {
+    float: right;
+  }
+</style>
+
+<p>The fifth assignment is adding reflections using recursive ray tracing. I added
+a <em>reflectance</em> property to each material, which ranges from 0.0 to 1.0. The
+local illumination (phong) is blended with the results of ray tracing the
+reflected ray based on this value.</p>
+
+<p>Here&#39;s a screenshot of the scene with the far sphere being 100% reflective,
+the floor being 10% reflective, and the background being changed to blue.</p>
+
+<p><a href="/post-content/2018/04/03/reflections/reflections_additive.png">
+  <img src="/post-content/2018/04/03/reflections/reflections_additive.png" />
+</a></p>
+
+<p>I made the materials able to be reflective in two different modes of blending:
+weighted, and additive. With weighted blending, the final color of the material
+surface is</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">((1 - reflectance) * localShadedColor) +
+(reflectance * reflectionShadedColor)
+</code></pre></div>
+<p>whereas with additive reflection blending, the final color is</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">localShadedColor + (reflectance * reflectionShadedColor);
+</code></pre></div>
+<p><a class="halfimg right" href="/post-content/2018/04/03/reflections/reflections_additive_preview.png">
+  <img src="/post-content/2018/04/03/reflections/reflections_additive_preview.png" />
+</a></p>
+
+<p>To make the far sphere look more like a shiny metal sphere, it&#39;s not just 100%
+reflective, it&#39;s additively reflective. Its reflection is blended additively
+with a phong shading that has a 100% white specular color and a 10% white
+diffuse color. As a result, the image to the right is what the OpenGL preview
+looks like.</p>
+
+<p>And here&#39;s two additional images that are fun to look at. The first is a
+close-up of the red and green spheres, each being 70% reflective.</p>
+
+<p>The second image shows my raytraced reflections not quite working. But it
+looks pretty damn cool, right? Click it for the full-res screenshot, it&#39;s worth
+it.</p>
+
+<p><a class="halfimg" href="/post-content/2018/04/03/reflections/both_reflective.png">
+  <img src="/post-content/2018/04/03/reflections/both_reflective.png" />
+</a><a class="halfimg" href="/post-content/2018/04/03/reflections/oh_my.png">
+  <img src="/post-content/2018/04/03/reflections/oh_my.png" />
+</a></p>
+</p>
+           <!--<p class="readmore"><a href="/giclass/2018/04/03/gi-reflections.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>-->
+         </section>
+      </article>
+  
+      <article class="preview post">
+         <header>
+           <!--<h1 class="post-title"><a href="/giclass/2018/04/02/gi-procedural-textures.html">Procedural Textures</a></h1>-->
+           <h1 class="post-title">Procedural Textures</h1>
+           <div class="post-meta"><time datetime="02 April, 2018">02 April, 2018</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><style type="text/css">
+  .halfimg {
+    display: inline-block;
+    width: 50%;
+  }
+</style>
+
+<p>The fourth Global Illumination assignment introduces UV mapping for procedural
+texture generation or texture mapping. To achieve this, I added UVs to
+spherical meshes and used barycentric interpolation to interpolate normals
+and texture coordinates for all meshes–including the ground plane.</p>
+
+<p>Here is the raytraced image with the diffuse checkerboard ground plane.</p>
+
+<p><a href="/post-content/2018/04/02/procedural-textures/uv_raytraced.png">
+  <img src="/post-content/2018/04/02/procedural-textures/uv_raytraced.png" />
+</a></p>
+</p>
+           <!--<p class="readmore"><a href="/giclass/2018/04/02/gi-procedural-textures.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>-->
+         </section>
+      </article>
+  
+      <article class="preview post">
+         <header>
+           <!--<h1 class="post-title"><a href="/giclass/2018/03/15/gi-shadows.html">Phong Shading and Shadows</a></h1>-->
+           <h1 class="post-title">Phong Shading and Shadows</h1>
+           <div class="post-meta"><time datetime="15 March, 2018">15 March, 2018</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><style type="text/css">
+  .halfimg {
+    display: inline-block;
+    width: 50%;
+  }
+</style>
+
+<p>For the third Global Illumination assignment, I implemented phong shading and
+shadows from light sources. At this time I also made the two sphere separate
+colors, seen in the left image below. The right image is the resulting
+raytraced image.</p>
+
+<p><a class="halfimg" href="/post-content/2018/03/15/shadows/phong_realtime.png">
+  <img src="/post-content/2018/03/15/shadows/phong_realtime.png" />
+</a><a class="halfimg" href="/post-content/2018/03/15/shadows/phong_one_light.png">
+  <img src="/post-content/2018/03/15/shadows/phong_one_light.png" />
+</a></p>
+
+<p>And for extra credit, here&#39;s a render of the scene with two directional lights
+instead of one. To keep the overall intensity of the lighting the same, the two
+directional lights each have half the diffuse brightness as the previous single
+light.</p>
+
+<p><a href="/post-content/2018/03/15/shadows/phong_two_lights.png">
+  <img src="/post-content/2018/03/15/shadows/phong_two_lights.png" />
+</a></p>
+</p>
+           <!--<p class="readmore"><a href="/giclass/2018/03/15/gi-shadows.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>-->
+         </section>
+      </article>
+  
+      <article class="preview post">
+         <header>
+           <!--<h1 class="post-title"><a href="/giclass/2018/02/13/gi-raytracing-framework.html">Raytracing Framework</a></h1>-->
+           <h1 class="post-title">Raytracing Framework</h1>
+           <div class="post-meta"><time datetime="13 February, 2018">13 February, 2018</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><style type="text/css">
+  .halfimg {
+    display: inline-block;
+    width: 50%;
+  }
+</style>
+
+<p>The basic raytracing framework has been implemented in this second assignment.
+When the program launches, it&#39;s rendering the scene using OpenGL, and the user
+can position the camera using the keyboard and mouse. To initiate the render,
+the user taps the space bar. Once the render is complete, it&#39;s displayed on top
+of the realtime render, and the user can tap space to toggle between the OpenGL
+render and the raytraced render.</p>
+
+<p>Here&#39;s the scene from the first post rendered using the raytracer:</p>
+
+<p><a href="/post-content/2018/02/13/raytracing-framework/rendered_front.png">
+  <img src="/post-content/2018/02/13/raytracing-framework/rendered_front.png" />
+</a></p>
+
+<p>Additionally, for extra credit, here are screenshots of the scene with an
+alternative camera position, rendered both in real-time and with the raytracer.</p>
+
+<p><a class="halfimg" href="/post-content/2018/02/13/raytracing-framework/realtime_alt.png">
+  <img src="/post-content/2018/02/13/raytracing-framework/realtime_alt.png" />
+</a><a class="halfimg" href="/post-content/2018/02/13/raytracing-framework/rendered_alt.png">
+  <img src="/post-content/2018/02/13/raytracing-framework/rendered_alt.png" />
+</a></p>
+</p>
+           <!--<p class="readmore"><a href="/giclass/2018/02/13/gi-raytracing-framework.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>-->
+         </section>
+      </article>
+  
+      <article class="preview post">
+         <header>
+           <!--<h1 class="post-title"><a href="/giclass/2018/01/21/gi-setting-the-scene.html">Setting The Scene</a></h1>-->
+           <h1 class="post-title">Setting The Scene</h1>
+           <div class="post-meta"><time datetime="21 January, 2018">21 January, 2018</time></div>
+         </header>
+         <section class="post-excerpt post-content">
+           <p><p>To create and preview the geometry layout for my Global Illumination scene,
+I branched my toy OpenGL engine and created a scene. The source code for the
+scene is on my GitHub in
+<a href="https://github.com/dag10/DrewGraphics/blob/giclasslayout/src/scenes/LayoutScene.cpp">LayoutScene.cpp</a>.</p>
+
+<p>Here&#39;s the output from the camera&#39;s perspective:</p>
+
+<p><a href="/post-content/2018/01/21/gi-setting-the-scene/screenshot.png">
+  <img src="/post-content/2018/01/21/gi-setting-the-scene/screenshot.png" />
+</a></p>
+
+<p>The coordinate system is right-handed, so the forward vector is <code>(0, 0, -1)</code>.</p>
+
+<p>The floor grid is a 12 x 28 unit grid.</p>
+
+<p>The camera is positioned at the position <code>(-3, 2, 5)</code>, with its forward vector
+being <code>(0, -0.164, 0)</code>. Its vertical field of view is 60 degrees.</p>
+
+<p>Both spheres are 2.5 units in diameter.</p>
+
+<p>The sphere closest to the camera, which will become the transparent sphere
+in the ray tracer, is at position <code>(-3, 2, 0)</code>.</p>
+
+<p>The sphere behind it, which will become the reflective sphere, is positioned
+at <code>(-1, 1.5, -2)</code>.</p>
+
+<p>The lighting in the scene is a directional light, pointing in the direction
+of <code>(0, -1, -0.3)</code> normalized.</p>
+
+<p>Here&#39;s a top-down orthographic projection:</p>
+
+<p><a href="/post-content/2018/01/21/gi-setting-the-scene/ortho.png">
+  <img src="/post-content/2018/01/21/gi-setting-the-scene/ortho.png" />
+</a></p>
+</p>
+           <!--<p class="readmore"><a href="/giclass/2018/01/21/gi-setting-the-scene.html">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>-->
+         </section>
+      </article>
+  
+
+</main>
+
+        </section>
+
+    </article>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="inner">
+             <section class="copyright">&copy; 2018 <a href="/">Drew Gottlieb</a>. All rights reserved.</section>
+             <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19567403-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
